@@ -1,3 +1,7 @@
+![GitHub top language](https://img.shields.io/github/languages/top/JoaoSBarbosa/barbosa-code) ![GitHub language count](https://img.shields.io/github/languages/count/JoaoSBarbosa/barbosa-code)
+
+
+
 # Barbosa Code - Portfolio Profissional 🐺
 
 Este é o meu portfólio profissional em andamento, uma plataforma que reflete minha jornada, habilidades e projetos no mundo do desenvolvimento web. Abaixo, uma visão geral das principais seções:
