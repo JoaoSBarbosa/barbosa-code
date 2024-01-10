@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Barbosa Code - Portfolio Profissional 🐺
 
-## Getting Started
+Este é o meu portfólio profissional em andamento, uma plataforma que reflete minha jornada, habilidades e projetos no mundo do desenvolvimento web. Abaixo, uma visão geral das principais seções:
 
-First, run the development server:
+## 🏠 Home
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+A página inicial apresenta uma breve introdução sobre mim, acompanhada por uma foto que reflete minha personalidade e profissionalismo. Além disso, você encontrará uma seleção dos meus projetos mais recentes, destacando meu trabalho e competências.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Projetos
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Ao clicar em um projeto na página inicial, você será direcionado para a página de detalhes do projeto. Lá, você encontrará informações detalhadas sobre o projeto, sua implementação e, se estiver online, um link direto para acessá-lo. Explore meu portfólio e descubra a variedade de projetos que participei.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 📚 Sobre Mim
 
-## Learn More
+A seção "Sobre Mim" oferece uma visão mais aprofundada sobre quem sou. Desde uma breve narrativa sobre minha jornada até minha formação acadêmica e informações de contato, esta página fornece uma compreensão holística sobre minha trajetória profissional.
 
-To learn more about Next.js, take a look at the following resources:
+## 👔 Experiência
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+A página de experiência lista minhas posições profissionais anteriores, destacando as funções desempenhadas e as habilidades adquiridas ao longo do tempo. Explore meu histórico profissional e descubra como minhas experiências moldaram minha jornada profissional.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Sinta-se à vontade para navegar pelas diferentes seções e conhecer mais sobre meu trabalho e experiência. Caso tenha alguma dúvida ou queira entrar em contato, estou disponível por meio das informações fornecidas na seção "Sobre Mim".
 
-## Deploy on Vercel
+## 🚀 Stack Tecnológica
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+[![React](https://img.shields.io/badge/-React-61DAFB?style=flat&logo=react&logoColor=white)](https://reactjs.org/) [![Next.js](https://img.shields.io/badge/-Next.js-000000?style=flat&logo=next.js&logoColor=white)](https://nextjs.org/) [![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/-Tailwind%20CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/) [![FlowBite](https://img.shields.io/badge/-FlowBite-3E3E3E?style=flat&logo=flowbite&logoColor=white)](https://flowbite.com/)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

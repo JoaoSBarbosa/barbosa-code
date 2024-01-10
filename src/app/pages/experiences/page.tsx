@@ -1,14 +1,14 @@
 import {HeaderNav} from "@/app/components/header/HeaderNav";
 import {MobileContext} from "@/app/Contexts/MobileContext";
 
-const Page = () => {
-    return (
+const Page=()=>{
+    return(
         <MobileContext>
-            <div>
-                <HeaderNav/>
-                Olá, mundo
-            </div>
+            <HeaderNav/>
+            <h1>Projetos profisionais</h1>
         </MobileContext>
+
     )
 }
+
 export default Page;
