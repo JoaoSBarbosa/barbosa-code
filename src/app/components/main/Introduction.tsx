@@ -10,26 +10,38 @@ export const Introduction = () => {
     const [title, setTitle] = useState('');
 
 
+    useEffect(() => {
+        const titleText = 'Olá, eu sou o João Barbosa';
+        let index = 0;
 
-    // useEffect(() => {
-    //     const titleText = 'Olá, eu sou João Barbosa';
-    //     let index = 0;
-    //     const intervalId = setInterval(() => {
-    //         if (index <= titleText.length) {
-    //             setTitle(titleText.slice(0, index));
-    //             index += 1;
-    //         }
-    //     }, 110);
-    //     return () => clearInterval(intervalId);
-    // }, []);
+        const handleTypingEffect = () => {
+            if (index <= titleText.length) {
+                setTitle(titleText.slice(0, index));
+                index += 1;
+            }
+        };
+
+        // Verifica se a largura da tela é igual ou menor a 1200px
+        const isMobile = window.matchMedia('(max-width: 1200px)').matches;
+
+        // Adiciona o efeito da máquina de escrever somente se for um dispositivo móvel
+        if (isMobile) {
+            const intervalId = setInterval(handleTypingEffect, 100);
+            return () => clearInterval(intervalId);
+        } else {
+            // Se não for um dispositivo móvel, exibe o texto imediatamente
+            setTitle(titleText);
+        }
+    }, []);
 
     return (
-        <main className={"introduction-container bg-black"}>
+        <main className={"introduction-container"}>
 
             <div className={`${styles.introduction}  text-white max-w-screen-xl mx-auto`}>
                 <div className={`${styles.introductionContent}`}>
                     <h1 className={"text-4xl font-bold"}>
-                        Olá, eu sou João Barbosa
+                        {/*Olá, eu sou João Barbosa*/}
+                        {title}
                         <span className={"text-customPurple rounded"}>.</span>
                     </h1>
                     <p className={""}>

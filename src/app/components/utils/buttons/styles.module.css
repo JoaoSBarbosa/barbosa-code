@@ -10,5 +10,11 @@
 }
 .about:hover{
     background: linear-gradient(90deg, #694DF8, #411DB9);
+}
+@media(max-width: 600px) {
 
+    .about{
+        padding: 12px 16px;
+        font-size: 16px;
+    }
 }

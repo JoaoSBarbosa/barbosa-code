@@ -27,7 +27,6 @@ export const NavButton = ({href, value, bgColor = '', textColor = ''}: NavButton
         <Link href={href}
               className={
             `${styles.about} 
-            hover:border-customPurple 
             uppercase 
             inline-block 
             max-h-max 
