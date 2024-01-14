@@ -35,11 +35,12 @@ export const Introduction = () => {
     }, []);
 
     return (
-        <main className={"introduction-container"}>
+        <main className={`${styles.introductionContainer}`}>
 
-            <div className={`${styles.introduction}  text-white max-w-screen-xl mx-auto`}>
+            <div
+                className={`${styles.introduction} text-white max-w-screen-xl mx-auto`}>
                 <div className={`${styles.introductionContent}`}>
-                    <h1 className={"text-4xl font-bold"}>
+                    <h1>
                         {/*Olá, eu sou João Barbosa*/}
                         {title}
                         <span className={"text-customPurple rounded"}>.</span>

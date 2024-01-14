@@ -7,6 +7,9 @@
     transition: all ease .3s;
     font-size: 18px;
     line-height: 1.33;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
 }
 .about:hover{
     background: linear-gradient(90deg, #694DF8, #411DB9);

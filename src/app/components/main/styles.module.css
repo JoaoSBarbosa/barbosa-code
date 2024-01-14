@@ -1,4 +1,7 @@
+.introductionContainer{
+    background-color: #000;
 
+}
 .introduction{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -8,7 +11,6 @@
     padding-bottom: 20px;
     box-sizing: border-box;
     margin: 0 auto;
-    background-color: #000;
 
 }
 .introductionContent{
@@ -21,10 +23,14 @@
     margin-bottom: 32px;
     font-size: 64px;
     line-height: 1.125;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
 }
 .introduction p{
     margin-bottom: 20px;
     font-family: 'Roboto', sans-serif;
+    font-weight: 400;
     font-size: 24px;
     line-height: 1.5;
     color: #B2B2B2;
@@ -33,9 +39,6 @@
 .introductionImage{
     display: flex;
     justify-content: right;
-    /*margin-bottom: -40px;*/
-
-    /*border: 1px solid red;*/
 
 }
 .image{
@@ -45,10 +48,12 @@
 }
 
 @media(max-width: 1200px){
+    .introductionContainer{
+        background-color: #111111;
+    }
     .introduction{
         grid-template-columns: 1fr;
         gap: 0 32px;
-        background-color: #111111;
     }
     .introduction h1{
         margin-bottom: 32px;

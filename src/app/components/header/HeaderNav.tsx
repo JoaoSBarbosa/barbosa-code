@@ -8,7 +8,7 @@ import {NavBarCustomTema} from "@/app/components/Temas/NavBarCustomTema";
 
 export const HeaderNav = () => {
     return (
-        <header className={`bg-black pb-6`}>
+        <header className={`bg-black pb-6 ${styles.menu}`}>
             <Navbar fluid rounded className={`${styles.navbar} bg-black max-w-screen-xl mx-auto `} theme={NavBarCustomTema}>
 
                 <Navbar.Brand as={Link} href="/">

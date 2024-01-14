@@ -1,0 +1,24 @@
+.lastProjectSubTitle{
+    font-style: normal;
+    font-variant-caps: normal;
+    font-weight: 600;
+    font-stretch: normal;
+    font-size: 2rem;
+    line-height: 1.25;
+    font-family: 'Poppins', sans-serif;
+}
+
+.lastProjectTechnologies{
+    font-weight: 500;
+    font-stretch: normal;
+    font-size: 1.125rem;
+    line-height: 1.35;
+    font-family: Roboto, sans-serif;
+    /*color: #595959;*/
+    height: max-content;
+    width: max-content;
+    padding: 5px;
+    border: 2px solid #595959;
+
+
+}
