@@ -29,6 +29,7 @@ export const LatestProjectCard = ({ project }: ProjectCardProps) => {
         <>
             <img src={`/img/${project.coverImage}`} alt={project.coverImage} />
             <h3 className={`${styles.lastProjectSubTitle}`}>{project?.title}</h3>
+            <p>{project.id}</p>
             <div className={"flex gap-3 flex-wrap"}>
                 {project?.technologies?.map((tec, index) => {
                     const IconComponent = technologyIcons[tec];

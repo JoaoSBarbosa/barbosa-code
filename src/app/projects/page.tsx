@@ -4,7 +4,7 @@ const Page=()=>{
     return(
         <>
             <HeaderNav/>
-            <h1>Projetos</h1>
+            <h1>Projetos página</h1>
         </>
 
     )

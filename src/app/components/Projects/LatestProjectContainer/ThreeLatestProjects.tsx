@@ -10,7 +10,7 @@ export const ThreeLatestProjects = () => {
             <h2 className={`${styles.lastProjectTitle}`}>últimos projetos</h2>
             <ul>
                 {lastThreeProjects.map((project, index) => (
-                    <Link href={`/pages/projects/project?id=${project.id}`}>
+                    <Link href={`/projects/${project.id}`}>
                         <li key={project.id}>
                             <LatestProjectCard project={project}/>
                         </li>

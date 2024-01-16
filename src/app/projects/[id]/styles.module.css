@@ -1,0 +1,22 @@
+.projectContainer{
+    height: calc(100vh - 110px);
+    background-color: #111111;
+    color: #fff;
+    padding-top: 80px;
+
+}
+.projectContent{
+    display: flex;
+
+    align-items: center;
+
+    border: 1px solid red;
+}
+.projectImageContainer{
+
+
+}
+.projectImageContainer img{
+
+
+}
