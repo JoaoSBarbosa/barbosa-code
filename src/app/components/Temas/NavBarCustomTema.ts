@@ -20,14 +20,17 @@ export const NavBarCustomTema = {
     "brand": {
         "base": "flex items-center"
     },
+
     "collapse": {
-        "base": "w-full md:block md:w-auto",
-        "list": "mt-4 flex flex-col md:mt-0 md:flex-row md:space-x-8 md:text-sm md:font-medium",
+        "base": "w-full ease-in duration-300 md:block md:w-full z-50 bg-black absolute left-0 right-0 top-24 h-full",
+        "list": "z-50 mt-4 flex flex-col md:mt-0 md:flex-row md:space-x-8 md:text-sm md:font-medium",
         "hidden": {
             "on": "hidden",
             "off": ""
-        }
+        },
     },
+
+
     "link": {
         "base": "block py-2 pr-4 pl-3 md:p-0 uppercase text-lg",
         "active": {
