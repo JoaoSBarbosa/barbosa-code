@@ -3,6 +3,8 @@
     background-color: #111111;
     color: #fff;
     padding-top: 80px;
+    border: 1px solid red;
+
 
 }
 .projectContent{
@@ -11,12 +13,19 @@
     align-items: center;
 
     border: 1px solid red;
+
 }
 .projectImageContainer{
 
+    flex: 1;
+
+}
+.projectDetails{
+    flex: 1;
 
 }
 .projectImageContainer img{
 
+    height: 500px;
 
 }

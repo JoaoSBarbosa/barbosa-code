@@ -16,32 +16,26 @@ const technologyIcons: Record<string, React.FC<IconBaseProps>> = {
     CSS: FaCss3Alt,
 };
 
-const technologyColors: Record<string, string> = {
-    React: '#61DAFB',
-    JavaScript: '#F7DF1E',
-    HTML: '#E34C26',
-    Sass: '#CC6699',
-    CSS: '#1572B6',
-};
-
 export const LatestProjectCard = ({ project }: ProjectCardProps) => {
     return (
-        <>
-            <img src={`/img/${project.coverImage}`} alt={project.coverImage} />
+        <div className={`flex flex-col gap-5 ${styles.lastProjecContainer} `}>
             <h3 className={`${styles.lastProjectSubTitle}`}>{project?.title}</h3>
-            <p>{project.id}</p>
-            <div className={"flex gap-3 flex-wrap"}>
+            <img src={`/img/${project.coverImage}`} alt={project.coverImage} className={"rounded-md"}/>
+
+            <div className={"flex gap-10 items-center justify-center flex-wrap"}>
                 {project?.technologies?.map((tec, index) => {
                     const IconComponent = technologyIcons[tec];
-                    const color = technologyColors[tec] || '#000'; // Cor padrão caso não esteja definida
 
                     return IconComponent ? (
-                        <span key={index} className={`${styles.lastProjectTechnologies} rounded-full flex items-center justify-center`} style={{ color }}>
+                        <span
+                            key={index}
+                            className={`${styles.lastProjectTechnologies} 
+                            rounded-full flex items-center justify-center`}>
                             <IconComponent />
                         </span>
                     ) : null;
                 })}
             </div>
-        </>
+        </div>
     )
 }

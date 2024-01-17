@@ -1,6 +1,102 @@
-.lastProjectTitle{
+
+.projectListContainer {
+    padding-top: 60px;
+    padding-bottom: 120px;
+}
+
+.lastProjectTitle {
     font-size: 4rem;
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
     line-height: 1.125;
+    margin-bottom: 40px;
+    max-width: 1200px;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+.projectListContent {
+    display: flex;
+    gap: 40px;
+    padding: 0 20px 20px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #694DF8 #000;
+
+}
+.projectListContent::-webkit-scrollbar {
+    height: 4px;
+}
+
+.projectListContent::-webkit-scrollbar-thumb {
+    background-color: #694DF8; /* Cor do "ponteiro" da barra de rolagem */
+    border-radius: 8px;
+}
+
+
+.projectListContent li {
+    display: flex;
+    min-width: 280px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+    align-content: center;
+    background-color: #000;
+    padding: 10px;
+    color: #595959;
+    border-radius: 4px;
+    position: relative;
+
+}
+
+.projectListContent li::before {
+    content: "";
+    width: 4px;
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    background-color: #694DF8;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: .6s;
+}
+
+.projectListContent li:hover::before {
+    visibility: visible;
+    overflow: auto;
+    height: 100%;
+}
+
+@media (min-width: 500px) {
+    .projectListContent {
+        margin: auto;
+    }
+
+    .projectListContent::-webkit-scrollbar {
+        width: 2px; /* Largura da barra de rolagem */
+        height: 4px;
+    }
+
+    .projectListContent::-webkit-scrollbar-thumb {
+        background-color: #5b21b6;
+        border-radius: 8px;
+    }
+
+    .projectListContent::-webkit-scrollbar-track {
+        background-color: #111111;
+    }
+}
+@media (max-width: 800px) {
+    .projectListContainer {
+        padding-bottom: 60px;
+    }
+
+    .projectListContent {
+        gap: 20px;
+    }
 }
