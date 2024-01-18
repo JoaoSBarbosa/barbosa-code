@@ -1,5 +1,6 @@
 .introductionContainer{
     background-color: #000;
+    padding-top: 80px;
 
 }
 .introduction{
@@ -69,6 +70,9 @@
     }
 }
 @media(max-width: 800px){
+    .introductionContainer{
+        padding-top: 20px;
+    }
     .introduction{
         padding-bottom: 0;
     }
