@@ -1,5 +1,6 @@
 import styles from "./styles.module.css"
 import {CardServices} from "@/app/components/utils/cards/cardServices";
+import {CardTechs} from "@/app/components/utils/cards/cardTechs";
 
 export const Services = () => {
     return (
@@ -10,7 +11,7 @@ export const Services = () => {
                     ${styles.servicesContainer}
                     ${styles.servicesContainerGrid}
                     `
-            }
+                }
             >
                 <div className={`${styles.servicesContent}`}>
                     <div className={`${styles.servicesContentText}`}>
@@ -61,8 +62,11 @@ export const Services = () => {
 
                 </div>
                 <div className={`${styles.servicesContentImage}`}>
-                    <img src={"/img/teia.png"}/>
+
+                    <CardTechs/>
+
                 </div>
+
 
             </div>
         </article>
