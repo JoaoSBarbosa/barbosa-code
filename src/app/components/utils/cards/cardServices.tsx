@@ -1,16 +1,21 @@
 'use client';
 
 import {Card} from 'flowbite-react';
+import {useContext} from "react";
+import {CreateContext} from "@/app/Contexts/ServicesContext";
 
 type CardServicesProps = {
     titleCard: string;
     descriptionCard: string;
+    cardClasses?: string; // Nova propriedade para classes do Card
 }
-export const CardServices = ({titleCard, descriptionCard}: CardServicesProps) => {
+export const CardServices = ({titleCard, descriptionCard,cardClasses}: CardServicesProps) => {
+
+    const createContext = useContext(CreateContext);
 
 
     return (
-        <Card className="max-w-sm bg-black">
+        <Card className={` bg-black border-double border-2 border-transparent ${cardClasses}`} style={{minWidth: "280px"}}>
             <h5 className="text-2xl font-bold tracking-tight text-white dark:text-white">
                 {titleCard}
             </h5>
@@ -18,6 +23,8 @@ export const CardServices = ({titleCard, descriptionCard}: CardServicesProps) =>
                 {descriptionCard}
             </p>
         </Card>
+
+
     );
 
 

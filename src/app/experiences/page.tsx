@@ -1,12 +1,12 @@
 import {HeaderNav} from "@/app/components/header/HeaderNav";
-import {MobileContext} from "@/app/Contexts/MobileContext";
+import {ServicesContext} from "@/app/Contexts/ServicesContext";
 
 const Page=()=>{
     return(
-        <MobileContext>
+        <ServicesContext>
             <HeaderNav/>
             <h1>Projetos profisionais</h1>
-        </MobileContext>
+        </ServicesContext>
 
     )
 }
