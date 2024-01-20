@@ -22,20 +22,26 @@ export const CardTechs = () => {
     };
 
     return (
-        <div className={"flex flex-col gap-20"}>
+        <div className={"flex flex-col gap-20"} style={{padding:"20px"}}>
             <div className={"grid grid-cols-5 gap-3"}>
                 {TechnologiesData.map((techItem, index) => (
                     <div
                         key={techItem.id}
-                        className={`bg-gray-700 w-16 h-16 rounded-full cursor-pointer ${selectedTechIndex === index ? styles.selectedTech : ''}`}
+                        className={`bg-transparent w-16 h-16 rounded-full cursor-pointer 
+                        ${styles.svgContainer} ${selectedTechIndex === index ? styles.selectedTech : ''}
+                         ${styles.technologiesImageContainer}`}
                         onClick={() => handleTechClick(techItem, index)}
                     >
-                        <img src={techItem.uraImage} className="rounded-full max-w-full" alt={techItem.technology} />
+                        <img
+                            src={techItem.uraImage}
+                            className={`rounded-full max-w-full object-cover `}
+                            alt={techItem.technology}
+                        />
                     </div>
                 ))}
             </div>
 
-            <div className={"flex flex-col gap-10"}>
+            <div className={"flex flex-col gap-10"} >
                 <div className={"flex items-center "}>
                     <h2 className={"text-3xl"}>{tech?.technology}</h2>
                     <span

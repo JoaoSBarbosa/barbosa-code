@@ -1,5 +1,6 @@
 .servicesContainerBg{
     background-color: #111111;
+    border: 1px solid red;
 }
 .servicesContent h2{
 
@@ -24,6 +25,7 @@
     padding-bottom: 20px;
     box-sizing: border-box;
     margin: 0 auto;
+    position: relative;
 }
 .servicesContainerGrid{
     display: grid;
@@ -31,9 +33,26 @@
     gap: 40px;
 }
 .servicesContentImage{
-    border: 1px solid #595959;
+    /*border: 1px solid #595959;*/
+    /*background-color: #fff;*/
     padding: 20px;
+    /*background: url("/public/img/bg-rede.jpg");*/
+    /*background: url("/img/bg-rede.jpg");*/
+    /*height: 900px;*/
+    position: absolute;
+    right: 0;
+    top: -50px;
+    bottom: -50px;
+    width: 600px;
+    border-radius: 10px;
+
+    /*background-image: url("../../../../public/img/bg-scrip.jpg");*/
+    background-image: url("https://uploaddeimagens.com.br/images/004/717/994/full/34371268_rm251-mind-14-f_1.png?1705713962");
+    background-position: center;
+    background-size: cover;
+    opacity: 1; /* Certifique-se de que a opacidade seja 1 para não afetar os elementos filhos */
 }
+
 
 .servicesIconsContainer{
     /*display: grid;*/

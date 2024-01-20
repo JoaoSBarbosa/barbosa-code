@@ -5,14 +5,7 @@ import {CardTechs} from "@/app/components/utils/cards/cardTechs";
 export const Services = () => {
     return (
         <article className={`${styles.servicesContainerBg}`}>
-            <div
-                className={
-                    `max-w-screen-xl mx-auto text-white
-                    ${styles.servicesContainer}
-                    ${styles.servicesContainerGrid}
-                    `
-                }
-            >
+            <div className={`max-w-screen-xl mx-auto text-white ${styles.servicesContainer} ${styles.servicesContainerGrid}`}>
                 <div className={`${styles.servicesContent}`}>
                     <div className={`${styles.servicesContentText}`}>
                         <h2>Serviços</h2>
@@ -57,14 +50,12 @@ export const Services = () => {
                                 "entities para criar sistemas robustos"}
                         />
 
-
                     </div>
 
                 </div>
+
                 <div className={`${styles.servicesContentImage}`}>
-
                     <CardTechs/>
-
                 </div>
 
 
