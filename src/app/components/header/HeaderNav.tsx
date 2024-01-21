@@ -4,7 +4,7 @@ import Link from 'next/link';
 import React, {useContext, useEffect, useState} from 'react';
 import styles from './styles.module.css';
 import {Navbar} from 'flowbite-react';
-import {NavBarCustomTema} from "@/app/components/Temas/NavBarCustomTema";
+import {NavBarCustomTema} from "@/app/components/Theme/NavBarCustomTema";
 
 export const HeaderNav = () => {
     return (

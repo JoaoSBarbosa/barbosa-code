@@ -1,6 +1,6 @@
 import {ProjectsDataPros} from "@/app/type/projectsDataPros";
 import {HeaderNav} from "@/app/components/header/HeaderNav";
-import {projectsData} from "@/app/list/projects/projectsData";
+import {ProjectsData} from "@/app/list/projects/projectsData";
 import styles from "./styles.module.css";
 import {Card} from 'flowbite-react';
 
@@ -14,7 +14,7 @@ const Page = ({params}: Props) => {
     const projectId = Number(params.id);
 
     // Encontrar o projeto com o ID correspondente
-    const project: ProjectsDataPros | undefined = projectsData.find(
+    const project: ProjectsDataPros | undefined = ProjectsData.find(
         (p) => p.id === projectId
     );
 

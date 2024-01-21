@@ -16,6 +16,7 @@ const config: Config = {
       },
       colors:{
         customPurple: '#694DF8',
+        customDarkPurple: '#411DB9',
         customMidnightBlack: "#111111"
       }
     },

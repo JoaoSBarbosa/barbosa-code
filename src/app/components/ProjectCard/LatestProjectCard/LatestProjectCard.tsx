@@ -20,7 +20,7 @@ export const LatestProjectCard = ({ project }: ProjectCardProps) => {
     return (
         <div className={`flex flex-col gap-5 ${styles.lastProjecContainer} `}>
             <h3 className={`${styles.lastProjectSubTitle}`}>{project?.title}</h3>
-            <img src={`/img/${project.coverImage}`} alt={project.coverImage} className={"rounded-md"}/>
+            <img src={`/img/projects/${project.coverImage}`} alt={project.coverImage} className={"rounded-md"}/>
 
             <div className={"flex gap-10 items-center justify-center flex-wrap"}>
                 {project?.technologies?.map((tec, index) => {

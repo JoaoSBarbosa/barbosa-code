@@ -1,6 +1,6 @@
 import {ProjectsDataPros} from "@/app/type/projectsDataPros";
 
-export const projectsData: ProjectsDataPros[] = [
+export const ProjectsData: ProjectsDataPros[] = [
     {
         id: 1,
         title: 'Portfólio versão 1',

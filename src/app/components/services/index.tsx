@@ -41,7 +41,7 @@ export const Services = () => {
                             áreas em que atuo e como elas se entrelaçam para criar soluções inovadoras.
                         </p>
                     </div>
-                    <div className={`grid grid-cols-2 gap-2 mt-5 ${styles.servicesContainerCard}`} style={{overflow:"scroll"}}>
+                    <div className={`grid grid-cols-2 gap-2 mt-5 ${styles.servicesContainerCard}`}>
 
                         <CardServices
                             cardClasses={handleWhatTypeTechSelected("ui")? boxStyles:""}
