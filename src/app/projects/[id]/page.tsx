@@ -1,8 +1,12 @@
 import {ProjectsDataPros} from "@/app/type/projectsDataPros";
 import {HeaderNav} from "@/app/components/header/HeaderNav";
 import {ProjectsData} from "@/app/list/projects/projectsData";
-import styles from "./styles.module.css";
+// import styles from "./styles.module.css";
+import styles from "../../globalStyles/projects.module.css";
 import {Card} from 'flowbite-react';
+import {ExternalNavButton} from "@/app/components/utils/buttons/NavButton";
+import {ProfessionalProjects} from "@/app/components/utils/carousel/ProfessionalProjectsCarousel";
+import {DataProfessionalProjects} from "@/app/list/projects/dataProfessionalProjects";
 
 type Props = {
     params: {
@@ -18,9 +22,6 @@ const Page = ({params}: Props) => {
         (p) => p.id === projectId
     );
 
-    console.log("Teste");
-    console.log('Project ID:', projectId);
-    console.log('Found Project:', project);
 
     return (
         <>
@@ -29,23 +30,31 @@ const Page = ({params}: Props) => {
                 {project ? (
                     <div className={`${styles.projectContainer} bg-gray-700`}>
                         <div className={`${styles.projectContent} max-w-screen-xl mx-auto`}>
+
+
                             <div className={styles.projectImageContainer}>
-                                <img src={`/img/${project.coverImage}`} alt={project.title} />
+                                <img src={`/img/projects/${project.coverImage}`} alt={project.title} />
                             </div>
+
+
                             <div className={styles.projectDetails}>
                                 <h2>{project.title}</h2>
                                 <p>{project.description}</p>
                                 <div className={styles.projectTechnologies}>
-                                    <p>Technologies:</p>
+                                    <p>Tecnologias:</p>
                                     <ul>
                                         {project.technologies.map((tech, index) => (
                                             <li key={index}>{tech}</li>
                                         ))}
                                     </ul>
                                 </div>
-                                <a href={project.url} target="_blank" rel="noopener noreferrer">
-                                    Visit Project
-                                </a>
+                                {/*<a href={project.url} target="_blank" rel="noopener noreferrer">*/}
+                                {/*    Visit Project*/}
+                                {/*</a>*/}
+                                <ExternalNavButton
+                                    href={project?.url}
+                                    value="Visite o projeto"
+                                />
                             </div>
                         </div>
                     </div>
