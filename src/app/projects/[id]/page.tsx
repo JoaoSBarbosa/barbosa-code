@@ -4,9 +4,17 @@ import {ProjectsData} from "@/app/list/projects/projectsData";
 // import styles from "./styles.module.css";
 import styles from "../../globalStyles/projects.module.css";
 import {Card} from 'flowbite-react';
-import {ExternalNavButton} from "@/app/components/utils/buttons/NavButton";
+import {
+    colorOptions,
+    ExternalNavButton,
+    LinkButton,
+    LinkButtonBorder,
+    NavButton
+} from "@/app/components/utils/buttons/NavButton";
 import {ProfessionalProjects} from "@/app/components/utils/carousel/ProfessionalProjectsCarousel";
 import {DataProfessionalProjects} from "@/app/list/projects/dataProfessionalProjects";
+import {HiOutlineArrowSmLeft} from "react-icons/hi";
+import React from "react";
 
 type Props = {
     params: {
@@ -27,8 +35,15 @@ const Page = ({params}: Props) => {
         <>
             <HeaderNav/>
             <div>
+
                 {project ? (
                     <div className={`${styles.projectContainer} bg-gray-700`}>
+                        <div className={"max-w-screen-xl mx-auto flex items-start py-2 my-4  w-full"}>
+                            <NavButton href={"/."} value={"Voltar"}>
+                                <HiOutlineArrowSmLeft className="h-6 w-6"/>
+                            </NavButton>
+
+                        </div>
                         <div className={`${styles.projectContent} max-w-screen-xl mx-auto`}>
 
 
@@ -48,15 +63,15 @@ const Page = ({params}: Props) => {
                                         ))}
                                     </ul>
                                 </div>
-                                {/*<a href={project.url} target="_blank" rel="noopener noreferrer">*/}
-                                {/*    Visit Project*/}
-                                {/*</a>*/}
+
                                 <ExternalNavButton
                                     href={project?.url}
                                     value="Visite o projeto"
                                 />
                             </div>
                         </div>
+
+
                     </div>
                     // <div className={`${styles.projectContainer} bg-gray-700`}>
                     //     <div className={`${styles.projectContent} max-w-screen-xl mx-auto`}>

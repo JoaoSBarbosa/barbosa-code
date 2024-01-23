@@ -3,6 +3,8 @@
     background-color: #111111;
     color: #fff;
     padding-top: 80px;
+    display: flex;
+    flex-direction: column;
 
 
 }
@@ -13,6 +15,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     /*height: 90%;*/
+    width: 80vw;
+
 }
 .projectImageContainer{
     /*flex: 1;*/

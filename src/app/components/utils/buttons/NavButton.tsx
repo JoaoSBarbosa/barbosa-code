@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {ReactNode} from 'react';
 import Link from 'next/link';
 import styles from './styles.module.css';
 import {Button} from "flowbite-react";
@@ -11,7 +11,8 @@ type NavButtonProps = {
     bgColor?: string;
     marginColor?: string;
     textColor?: string;
-    openInNewTab?:boolean;
+    openInNewTab?: boolean;
+    children?: ReactNode
 };
 
 export const colorOptions = {
@@ -25,7 +26,14 @@ export const colorOptions = {
     },
 };
 
-export const NavButton = ({ href, value, bgColor = '', textColor = '', openInNewTab = false }: NavButtonProps) => {
+export const NavButton = ({
+                              href,
+                              value,
+                              children,
+                              bgColor = '',
+                              textColor = '',
+                              openInNewTab = false
+                          }: NavButtonProps) => {
     const colorStyle = bgColor && textColor ? {background: bgColor, color: textColor} : {};
 
     return (
@@ -39,55 +47,74 @@ export const NavButton = ({ href, value, bgColor = '', textColor = '', openInNew
             font-bold
             hover:text-white`
               } style={colorStyle}>
+            {children}
             {value}
         </Link>
     );
 };
 
-export const ExternalNavButton = ({ href, value, bgColor = '', textColor = ''}: NavButtonProps) => {
+export const ExternalNavButton = ({href, value, bgColor = '', textColor = ''}: NavButtonProps) => {
     const colorStyle = bgColor && textColor ? {background: bgColor, color: textColor} : {};
 
     return (
         <a href={href}
            target={"_blank"}
-              className={
-                  `${styles.about}
+           className={
+               `${styles.about}
             uppercase
             inline-block
             max-h-max
             max-w-max
             font-bold
             hover:text-white`
-              } style={colorStyle}>
+           } style={colorStyle}>
             {value}
         </a>
     );
 };
-export const LinkButton = ({href, value, marginColor = '', textColor = ''}: NavButtonProps) => {
-    const colorStyle = marginColor && textColor ? {border: `2px solid ${marginColor}`, color: textColor} : {};
+type LinkButtonProps = {
+    href: string;
+    value: string;
+    bgColor?: string;
+    marginColor?: string;
+    textColor?: string;
+    openInNewTab?: boolean;
+    children?: ReactNode
+};
+export const LinkButton = ({href, value, children, marginColor = '', textColor = ''}: LinkButtonProps) => {
+    const colorStyle = marginColor && textColor ? {color: textColor} : {};
 
     return (
-        <Button outline gradientDuoTone="purpleToIndigo" theme={ButtonsTheme} className={"hover:text-white "} color={"indigo"}>
+        <Button outline gradientDuoTone="purpleToIndigo" theme={ButtonsTheme} className={"hover:text-white "}
+                color={"indigo"}>
             <Link href={href} className={"flex items-center gap-2 text-2xl"}>
+                {children &&
+                    children
+                }
+
                 {value}
-                <HiOutlineArrowRight className="h-6 w-6" />
+                {!children &&
+                    <HiOutlineArrowRight className="h-6 w-6"/>
+                }
+
             </Link>
         </Button>
 
     );
 };
 
-type LinkButtonBorderProps ={
+type LinkButtonBorderProps = {
     href: string;
     value: string;
+    children: ReactNode
 }
-export const LinkButtonBorder = ({href, value}:LinkButtonBorderProps) => {
+export const LinkButtonBorder = ({href, value, children}: LinkButtonBorderProps) => {
 
     return (
         <div className={`${styles.linkButtonBorder}`}>
             <Link href={href} className={"flex items-center gap-2 text-2xl"}>
                 {value}
-                <HiOutlineArrowRight className="h-6 w-6" />
+                <HiOutlineArrowRight className="h-6 w-6"/>
             </Link>
         </div>
 

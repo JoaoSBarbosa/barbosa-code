@@ -10,6 +10,9 @@
 
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
 .about:hover{
     background: linear-gradient(90deg, #694DF8, #411DB9);
