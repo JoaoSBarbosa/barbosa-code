@@ -1,6 +1,6 @@
-import { Carousel } from 'flowbite-react';
+import {Carousel, Badge } from 'flowbite-react';
 import Link from 'next/link';
-import { DataProfessionalProjectsProps } from '@/app/list/projects/dataProfessionalProjects';
+import {DataProfessionalProjectsProps} from '@/app/list/projects/dataProfessionalProjects';
 import {CarouselTheme} from "@/app/components/Theme/CarouselTheme";
 import styles from "@/app/components/Projects/LatestProjectContainer/styles.module.css";
 import {LinkButton, LinkButtonBorder} from "@/app/components/utils/buttons/NavButton";
@@ -8,10 +8,10 @@ import {LinkButton, LinkButtonBorder} from "@/app/components/utils/buttons/NavBu
 type ProfessionalProjectsProps = {
     projectsData: DataProfessionalProjectsProps[];
     projectId: number;
-    carroselTitle:string;
+    carroselTitle: string;
 };
 
-export const ProfessionalProjects = ({ projectsData, projectId,carroselTitle }: ProfessionalProjectsProps) => {
+export const ProfessionalProjects = ({projectsData, projectId, carroselTitle}: ProfessionalProjectsProps) => {
     const firstProject = projectsData[projectId];
 
     if (!firstProject) {
@@ -19,21 +19,31 @@ export const ProfessionalProjects = ({ projectsData, projectId,carroselTitle }: 
         return null;
     }
 
-    const { coverImage, title } = firstProject;
+    const {coverImage, title} = firstProject;
 
     return (
-        <article className=" flex-1 bg-black  rounded-md p-2" style={{height:"440px"}}>
+        <div className=" flex-1 bg-black relative rounded-md p-1" style={{height: "400px"}}>
+            <span className={"absolute z-50 left-1 right-1 text-gray-200 bottom-1 text-1xl p-2 bg-black"}>
+                {carroselTitle}
+            </span>
+            {/*<h2 className={" text-1xl text-gray-400"}>{carroselTitle}</h2>*/}
 
-            <h2 className={" text-1xl text-gray-400"}>{carroselTitle}</h2>
             <Carousel pauseOnHover theme={CarouselTheme}>
                 {coverImage.map((image, index) => (
-                    <img key={index} src={`/img/projects/${image}`} alt={title} height={300} className="object-cover  h-80" />
+                    <img
+                        key={index}
+                        src={`/img/projects/${image}`}
+                        alt={title}
+                        className="object-cover"
+                        style={{height: "100%"}}
+
+                    />
                 ))}
             </Carousel>
             {/*<Link href={`/projects/${projectId}`}>Confira</Link>*/}
-            <div className={"max-w-screen-xl mx-auto"}>
+            <div className={"max-w-screen-xl mt-4 mx-auto"}>
                 <LinkButtonBorder href={`/professionalProjects/${projectId}`} value={"Mais detalhes"}/>
             </div>
-        </article>
+        </div>
     );
 };

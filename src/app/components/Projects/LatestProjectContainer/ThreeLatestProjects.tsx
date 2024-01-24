@@ -14,7 +14,7 @@ type ThreeLatestProjectsProps ={
 export const ThreeLatestProjects = ({projectsData, title, hrefUri}:ThreeLatestProjectsProps) => {
     const lastThreeProjects = projectsData.slice(-3);
     return (
-        <article className={`${styles.projectListContainer} `}>
+        <article className={`${styles.projectListContainer}`}>
             <h2 className={`${styles.lastProjectTitle} max-w-screen-xl mx-auto`}>{title}</h2>
             <ul className={`${styles.projectListContent}`}>
                 {lastThreeProjects.map((project, index) => (
@@ -26,7 +26,7 @@ export const ThreeLatestProjects = ({projectsData, title, hrefUri}:ThreeLatestPr
                 ))}
             </ul>
 
-            <div className={"max-w-screen-xl mx-auto"}>
+            <div className={"max-w-screen-xl mx-auto px-5"}>
                 <LinkButton href={`/${hrefUri}`} value={"Ver todos"}/>
             </div>
         </article>

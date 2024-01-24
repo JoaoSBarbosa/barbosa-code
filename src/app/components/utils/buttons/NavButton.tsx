@@ -106,7 +106,7 @@ export const LinkButton = ({href, value, children, marginColor = '', textColor =
 type LinkButtonBorderProps = {
     href: string;
     value: string;
-    children: ReactNode
+    children?: ReactNode
 }
 export const LinkButtonBorder = ({href, value, children}: LinkButtonBorderProps) => {
 

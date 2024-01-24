@@ -13,8 +13,8 @@ const Page = () => {
         <>
             <HeaderNav/>
             <article className={`${styles.projectMain} `}>
-                <div className={`${styles.projectListContainer} `}>
-                    <h2 className={`${styles.lastProjectTitle} max-w-screen-xl mx-auto`}>Todos os projetos</h2>
+                <div className={`${styles.projectListContainer} max-w-screen-xl mx-auto`}>
+                    <h2 className={`${styles.lastProjectTitle}  text-gray-400`}>Todos os projetos</h2>
 
                     <ul className={`${styles.projectListContent}`}>
                         {ProjectsData.map((project) => (

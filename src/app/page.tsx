@@ -21,7 +21,7 @@ const Page = () => {
                         Projetos Profissionais
                     </h2>
 
-                    <div className={"flex  gap-5 flex-wrap"}>
+                    <div className={"flex gap-5 flex-wrap"}>
                         <ProfessionalProjects carroselTitle={"BeerFantose"} projectId={0} projectsData={DataProfessionalProjects}/>
                         <ProfessionalProjects carroselTitle={"B2BeerFantose"} projectId={1} projectsData={DataProfessionalProjects}/>
                     </div>
