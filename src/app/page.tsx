@@ -7,6 +7,7 @@ import {ProjectsData} from "@/app/list/projects/projectsData";
 import {DataProfessionalProjects} from "@/app/list/projects/dataProfessionalProjects";
 import {ProfessionalProjects} from "@/app/components/utils/carousel/ProfessionalProjectsCarousel";
 import styles from "@/app/components/Projects/LatestProjectContainer/styles.module.css";
+import Footer from "@/app/pages/footer/page";
 
 const Page = () => {
     return (
@@ -21,13 +22,15 @@ const Page = () => {
                         Projetos Profissionais
                     </h2>
 
-                    <div className={"flex gap-5 flex-wrap"}>
-                        <ProfessionalProjects carroselTitle={"BeerFantose"} projectId={0} projectsData={DataProfessionalProjects}/>
-                        <ProfessionalProjects carroselTitle={"B2BeerFantose"} projectId={1} projectsData={DataProfessionalProjects}/>
+                    <div className="grid gap-32 p-6 grid-cols-1 md:grid-cols-2">
+                        <ProfessionalProjects carroselTitle={"BeerFantose"} projectId={0}
+                                              projectsData={DataProfessionalProjects}/>
+                        <ProfessionalProjects carroselTitle={"B2BeerFantose"} projectId={1}
+                                              projectsData={DataProfessionalProjects}/>
                     </div>
 
                 </div>
-
+                <Footer/>
             </div>
         </ServicesContext>
     )

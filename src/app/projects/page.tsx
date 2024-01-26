@@ -7,6 +7,7 @@ import {
     TextColors
 } from "@/app/components/ProjectCard/LatestProjectCard/LatestProjectCard";
 import styles from "./styles.module.css";
+import Footer from "@/app/pages/footer/page";
 
 const Page = () => {
     return (
@@ -35,6 +36,7 @@ const Page = () => {
 
 
             </article>
+            <Footer/>
         </>
 
     )

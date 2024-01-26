@@ -1,6 +1,6 @@
 .servicesContainerBg {
     background-color: #111111;
-    margin-bottom: 5.25rem;
+    margin: 6rem 0;
 
 }
 
@@ -16,7 +16,8 @@
     position: relative;
     width: max-content;
 }
-.servicesTitle::before{
+
+.servicesTitle::before {
 
     content: "";
     position: absolute;
@@ -28,7 +29,8 @@
     width: 25%;
     transition: all ease .3s;
 }
-.servicesTitle:hover::before{
+
+.servicesTitle:hover::before {
 
     content: "";
     position: absolute;
@@ -39,6 +41,7 @@
     height: 4px;
     width: 100%;
 }
+
 .servicesContentText p {
     font-weight: 400;
     font-size: 1.3rem;
@@ -64,7 +67,6 @@
 
 }
 
-
 .servicesContainerGrid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -80,14 +82,25 @@
     width: 600px;
     border-radius: 10px;
 
-    /*background-image: url("../../../../public/img/bg-scrip.jpg");*/
-    background-image: url("https://uploaddeimagens.com.br/images/004/717/994/full/34371268_rm251-mind-14-f_1.png?1705713962");
-    background-position: center;
-    background-size: cover;
-    opacity: 1;
+}
+.neuralAnimation {
+    background: rgb(67, 31, 188);
+    background: linear-gradient(312deg, rgba(67, 31, 188, 1) 0%, rgba(21, 21, 21, 1) 50%, rgba(21, 21, 21, 1) 100%);
+    background-size: 300% 300%;
+    animation: gradientAnimation 10s ease infinite;
 }
 
-
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 .servicesIconsContainer {
 
 }

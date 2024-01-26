@@ -22,7 +22,7 @@ export const ProfessionalProjects = ({projectsData, projectId, carroselTitle}: P
     const {coverImage, title} = firstProject;
 
     return (
-        <div className=" flex-1 bg-black relative rounded-md p-1" style={{height: "400px"}}>
+        <div className="bg-black relative rounded-md p-1" style={{height: "400px"}}>
             <span className={"absolute z-50 left-1 right-1 text-gray-200 bottom-1 text-1xl p-2 bg-black"}>
                 {carroselTitle}
             </span>

@@ -1,0 +1,30 @@
+.footerBg {
+    background-color: black;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footerContainer {
+
+
+}
+
+.footerContact {
+    font-weight: 400;
+    font-stretch: normal;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-family: Roboto, sans-serif;
+    color: #fff;
+}
+
+.footerContactList {
+    color: #b2b2b2;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.35;
+    font-family: Poppins, sans-serif;
+
+}

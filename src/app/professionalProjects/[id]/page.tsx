@@ -2,6 +2,7 @@ import { DataProfessionalProjectsProps, DataProfessionalProjects } from "@/app/l
 import { HeaderNav } from "@/app/components/header/HeaderNav";
 import styles from "./styles.module.css";
 import {ExternalNavButton, NavButton} from "@/app/components/utils/buttons/NavButton";
+import Footer from "@/app/pages/footer/page";
 
 type Props = {
     params: {
@@ -52,6 +53,7 @@ const Page = ({ params }: Props) => {
                     <h2>Projeto não encontrado</h2>
                 )}
             </div>
+            <Footer/>
         </>
     );
 };

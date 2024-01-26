@@ -15,6 +15,7 @@ import {ProfessionalProjects} from "@/app/components/utils/carousel/Professional
 import {DataProfessionalProjects} from "@/app/list/projects/dataProfessionalProjects";
 import {HiOutlineArrowSmLeft} from "react-icons/hi";
 import React from "react";
+import Footer from "@/app/pages/footer/page";
 
 type Props = {
     params: {
@@ -90,6 +91,7 @@ const Page = ({params}: Props) => {
                     <h2>Projeto não encontrado</h2>
                 )}
             </div>
+            <Footer/>
         </>
     );
 };

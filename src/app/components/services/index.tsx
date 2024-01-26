@@ -83,7 +83,7 @@ export const Services = () => {
                 </div>
 
                 {windowWidth > minWidthToShowImage &&(
-                    <div className={`${styles.servicesContentImage}`}>
+                    <div className={`${styles.servicesContentImage} ${styles.neuralAnimation}`}>
                         <CardTechs/>
                     </div>
                 )}
