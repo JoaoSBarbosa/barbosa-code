@@ -1,0 +1,26 @@
+.projectContainer{
+    height: calc(100vh - 110px);
+    background-color: #111111;
+    color: #fff;
+    padding-top: 80px;
+
+}
+.projectContent{
+    display: flex;
+    align-items: center;
+
+}
+.projectImageContainer{
+
+    flex: 1;
+
+}
+.projectDetails{
+    flex: 1;
+
+}
+.projectImageContainer img{
+
+    height: 500px;
+
+}

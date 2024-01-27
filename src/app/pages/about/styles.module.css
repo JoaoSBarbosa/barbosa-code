@@ -1,0 +1,11 @@
+.aboutContainer{
+    height: 100vh;
+    padding-bottom: 1rem;
+    background-color: #111111;
+    color: #ffffff;
+
+}
+.aboutContainer p,
+.aboutContainer h1,
+.aboutContainer strong{
+}

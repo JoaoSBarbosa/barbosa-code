@@ -4,7 +4,7 @@ import Link from "next/link";
 import React from "react";
 const Footer =()=>{
     return(
-        <footer className={`${styles.footerBg}`}>
+        <footer className={`${styles.footerBg} `}>
             <div className={`${styles.footerContainer} max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-3`}>
 
                 <div>
