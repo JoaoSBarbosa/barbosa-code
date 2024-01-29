@@ -1,8 +1,9 @@
-import { DataProfessionalProjectsProps, DataProfessionalProjects } from "@/app/list/projects/dataProfessionalProjects";
-import { HeaderNav } from "@/app/components/header/HeaderNav";
+import {DataProfessionalProjectsProps, DataProfessionalProjects} from "@/app/list/projects/dataProfessionalProjects";
+import {HeaderNav} from "@/app/components/header/HeaderNav";
 import styles from "./styles.module.css";
 import {ExternalNavButton, NavButton} from "@/app/components/utils/buttons/NavButton";
 import Footer from "@/app/pages/footer/page";
+import {Button, Tooltip} from 'flowbite-react';
 
 type Props = {
     params: {
@@ -10,7 +11,7 @@ type Props = {
     };
 };
 
-const Page = ({ params }: Props) => {
+const Page = ({params}: Props) => {
     // Convertendo params.id para número
     const projectId = Number(params.id);
 
@@ -20,24 +21,34 @@ const Page = ({ params }: Props) => {
     );
     return (
         <>
-            <HeaderNav />
+            <HeaderNav/>
             <div>
                 {project ? (
                     <div className={`${styles.projectContainer} bg-gray-700`}>
                         <div className={`${styles.projectContent} max-w-screen-xl mx-auto`}>
-                            <div className={styles.projectImageContainer}>
-                                <img src={`/img/projects/${project.coverImage[0]}`} alt={`${project.title} Image`} />
+
+                            <div className={`${styles.projectImageContainer} flex justify-center`}>
+                                <img
+                                    src={`/img/projects/${project.coverImage[0]}`}
+                                    alt={`${project.title}`}
+                                />
                             </div>
+
                             <div className={styles.projectDetails}>
                                 <h2>{project.title}</h2>
                                 <p>{project.description}</p>
                                 <div className={styles.projectTechnologies}>
-                                    <p>Technologies:</p>
-                                    <ul>
+                                    <p>Tecnologias:</p>
+                                    <ul className={"flex gap-5 flex-wrap"}>
                                         {project.technologies.map((tech, index) => (
                                             <li key={index}>
-                                                <img src={`/path/to/your/icon.png`} alt={`${tech} Icon`} />
-                                                {tech}
+                                                <Tooltip content={tech} style="light">
+                                                    <img
+                                                        src={`/img/icons/${tech.toLowerCase()}.svg`}
+                                                        alt={`${tech}`}
+                                                        className={`rounded-full p-1`}
+                                                    />
+                                                </Tooltip>
                                             </li>
                                         ))}
                                     </ul>

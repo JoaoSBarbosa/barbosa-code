@@ -14,7 +14,7 @@ export const DataProfessionalProjects: DataProfessionalProjectsProps[] = [
         title: 'BeerFanstore',
         coverImage: ["job1-0.jpg","job1-1.jpg","job1-2.jpg","job1-3.jpg"],
         description: 'E-commerce B2C com nicho voltado para os fãs de cerveja. Site oficial de brands AMBEV',
-        technologies: ['WordPress','Elementor', 'CSS', 'JavaScript'],
+        technologies: ['WordPress', 'CSS', 'JavaScript'],
         url: 'https://beerfanstore.com.br/',
     },
     {

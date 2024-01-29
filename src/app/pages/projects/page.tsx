@@ -19,7 +19,7 @@ const Page = () => {
 
                     <ul className={`${styles.projectListContent}`}>
                         {ProjectsData.map((project) => (
-                            <Link href={`/projects/${project.id}`}>
+                            <Link href={`/pages/projects/${project.id}`}>
                                 <li key={project.id} >
                                     <LatestProjectCard
                                         project={project}

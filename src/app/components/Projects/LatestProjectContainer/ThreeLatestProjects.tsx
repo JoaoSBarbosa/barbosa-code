@@ -18,7 +18,7 @@ export const ThreeLatestProjects = ({projectsData, title, hrefUri}:ThreeLatestPr
             <h2 className={`${styles.lastProjectTitle} max-w-screen-xl mx-auto`}>{title}</h2>
             <ul className={`${styles.projectListContent}`}>
                 {lastThreeProjects.map((project, index) => (
-                    <Link href={`/projects/${project.id}`}>
+                    <Link href={`/pages/projects/${project.id}`}>
                         <li key={project.id}>
                             <LatestProjectCard project={project}/>
                         </li>

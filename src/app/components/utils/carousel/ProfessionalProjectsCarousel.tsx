@@ -42,7 +42,7 @@ export const ProfessionalProjects = ({projectsData, projectId, carroselTitle}: P
             </Carousel>
             {/*<Link href={`/projects/${projectId}`}>Confira</Link>*/}
             <div className={"max-w-screen-xl mt-4 mx-auto"}>
-                <LinkButtonBorder href={`/professionalProjects/${projectId}`} value={"Mais detalhes"}/>
+                <LinkButtonBorder href={`/pages/professionalProjects/${projectId}`} value={"Mais detalhes"}/>
             </div>
         </div>
     );

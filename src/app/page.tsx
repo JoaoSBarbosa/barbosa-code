@@ -23,10 +23,16 @@ const Page = () => {
                     </h2>
 
                     <div className="grid gap-32 p-6 grid-cols-1 md:grid-cols-2">
-                        <ProfessionalProjects carroselTitle={"BeerFantose"} projectId={0}
-                                              projectsData={DataProfessionalProjects}/>
-                        <ProfessionalProjects carroselTitle={"B2BeerFantose"} projectId={1}
-                                              projectsData={DataProfessionalProjects}/>
+                        <ProfessionalProjects
+                            carroselTitle={"BeerFantose"}
+                            projectId={0}
+                            projectsData={DataProfessionalProjects}
+                        />
+                        <ProfessionalProjects
+                            carroselTitle={"B2BeerFantose"}
+                            projectId={1}
+                            projectsData={DataProfessionalProjects}
+                        />
                     </div>
 
                 </div>
