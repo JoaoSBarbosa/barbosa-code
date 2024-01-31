@@ -8,7 +8,16 @@
     border: 2px solid red;
     padding: 5px;
 
-
+}
+.projectContainerButton{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+.projectContainerButton a{
+    border: 1px solid coral;
+    width: 100%;
 }
 .projectContent{
     /*display: flex;*/

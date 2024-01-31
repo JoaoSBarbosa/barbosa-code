@@ -34,7 +34,7 @@ export const NavButton = ({
                               textColor = '',
                               openInNewTab = false
                           }: NavButtonProps) => {
-    const colorStyle = bgColor && textColor ? {background: bgColor, color: textColor} : {};
+    // const colorStyle = bgColor && textColor ? {background: bgColor, color: textColor} : {};
 
     return (
         <Link href={href}
@@ -44,9 +44,10 @@ export const NavButton = ({
             inline-block
             max-h-max
             max-w-max
+   
             font-bold
             hover:text-white`
-              } style={colorStyle}>
+              } style={{justifyContent: children? "space-between":""}}>
             {children}
             {value}
         </Link>

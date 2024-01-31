@@ -39,17 +39,18 @@ const Page = ({params}: Props) => {
 
                 {project ? (
                     <div className={`${styles.projectContainer} bg-gray-700`}>
-                        <div className={"max-w-screen-xl mx-auto flex items-start py-2 my-4  w-full"}>
-                            <NavButton href={"/."} value={"Voltar"}>
-                                <HiOutlineArrowSmLeft className="h-6 w-6"/>
-                            </NavButton>
+                        {/*<div*/}
+                        {/*    className={`${styles.projectContainerButton} max-w-screen-xl mx-auto flex items-start sm:items-center py-2 my-4  w-full`}>*/}
+                        {/*    <NavButton href={"/."} value={"Voltar"}>*/}
+                        {/*        <HiOutlineArrowSmLeft className="h-6 w-6"/>*/}
+                        {/*    </NavButton>*/}
 
-                        </div>
+                        {/*</div>*/}
                         <div className={`${styles.projectContent} max-w-screen-xl mx-auto`}>
 
 
                             <div className={styles.projectImageContainer}>
-                                <img src={`/img/projects/${project.coverImage}`} alt={project.title} />
+                                <img src={`/img/projects/${project.coverImage}`} alt={project.title}/>
                             </div>
 
 
@@ -64,11 +65,17 @@ const Page = ({params}: Props) => {
                                         ))}
                                     </ul>
                                 </div>
+                                <div
+                                    className={`${styles.projectContainerButton} max-w-screen-xl mx-auto flex items-start sm:items-center py-2 my-4  w-full`}>
 
-                                <ExternalNavButton
-                                    href={project?.url}
-                                    value="Visite o projeto"
-                                />
+                                    <ExternalNavButton
+                                        href={project?.url}
+                                        value="Visite o projeto"
+                                    />
+                                    <NavButton href={"/."} value={"Voltar"}>
+                                        <HiOutlineArrowSmLeft className="h-6 w-16"/>
+                                    </NavButton>
+                                </div>
                             </div>
                         </div>
 
