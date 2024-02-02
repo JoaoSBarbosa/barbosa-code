@@ -1,4 +1,4 @@
-.projectContainer{
+.projectContainer {
     /*height: calc(100vh - 110px);*/
     background-color: #111111;
     color: #fff;
@@ -9,17 +9,21 @@
     padding: 5px;
 
 }
-.projectContainerButton{
+
+.projectContainerButton {
     display: flex;
+    flex-direction: column-reverse;
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
+    align-items: center;
 }
-.projectContainerButton a{
-    border: 1px solid coral;
-    width: 100%;
+
+.projectContainerButton a {
+    width: 90% !important;
 }
-.projectContent{
+
+.projectContent {
     /*display: flex;*/
     /*flex-wrap: wrap;*/
     /*align-items: center;*/
@@ -34,25 +38,24 @@
     justify-content: center;
 
 }
-.projectImageContainer{
-    /*flex: 1;*/
+
+.projectImageContainer {
     width: 100%;
-
-
 }
-.projectImageContainer img{
+
+.projectImageContainer img {
     /*height: 100%;*/
     /*object-fit: cover;*/
     /*object-position: top;*/
     width: 100%;
     height: auto;
-
 }
-.projectDetails{
+
+.projectDetails {
     /*flex: 1;*/
-
 }
-.projectDetails h2{
+
+.projectDetails h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
 }
@@ -104,3 +107,108 @@
     margin-right: 5px;
 }
 
+@media (min-width: 400px) {
+    .projectContainerButton {
+        flex-direction: row-reverse;
+        gap: 20px;
+        justify-content: space-between;
+    }
+
+    .projectContainerButton a {
+        width: max-content !important;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .projectContent {
+        padding: 5px;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .projectDetails,
+    .projectImageContainer{
+        height: 100%;
+    }
+
+    .projectContainerButton {
+        flex-direction: row-reverse;
+        gap: 20px;
+        justify-content: left;
+    }
+
+    .projectContainerButton a {
+        width: max-content !important;
+    }
+
+    .projectImageContainer {
+        width: 100%;
+    }
+
+    .projectImageContainer img {
+        max-width: 500px;
+        height: auto;
+    }
+
+}
+@media (min-width: 2500px) {
+    .projectContainer{
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .projectContent {
+        /*height: 100%;*/
+        padding: 5px;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        border: 2px solid red;
+        width: 100%;
+
+    }
+
+    .projectDetails,
+    .projectImageContainer{
+        height: 100%;
+        border: 2px solid red;
+    }
+
+    .projectContainerButton {
+        flex-direction: row-reverse;
+        gap: 20px;
+        justify-content: left;
+    }
+
+    .projectContainerButton a {
+        width: max-content !important;
+    }
+
+    .projectImageContainer {
+        width: 100%;
+    }
+
+    .projectImageContainer img {
+        height: 900px;
+        width: auto;
+    }
+    .projectDetails h2 {
+        font-size: 4rem;
+        margin-bottom: 10px;
+    }
+    .projectTechnologies p {
+        font-size: 2rem;
+    }
+    .projectTechnologies li {
+        font-size: 1.4rem;
+        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+    }
+
+
+
+}

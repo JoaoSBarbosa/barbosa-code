@@ -69,11 +69,16 @@ const Page = ({params}: Props) => {
                                     className={`${styles.projectContainerButton} max-w-screen-xl mx-auto flex items-start sm:items-center py-2 my-4  w-full`}>
 
                                     <ExternalNavButton
+                                        width={"maxContent"}
                                         href={project?.url}
                                         value="Visite o projeto"
                                     />
-                                    <NavButton href={"/."} value={"Voltar"}>
-                                        <HiOutlineArrowSmLeft className="h-6 w-16"/>
+                                    <NavButton
+                                        textColor={"#fff"}
+                                        href={"/."}
+                                        value={"Voltar"}
+                                    >
+                                        <HiOutlineArrowSmLeft className="h-6 w-6"/>
                                     </NavButton>
                                 </div>
                             </div>
