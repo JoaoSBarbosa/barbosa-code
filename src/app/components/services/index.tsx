@@ -6,6 +6,7 @@ import {useContext, useEffect, useState} from "react";
 import {CreateContext} from "@/app/Contexts/ServicesContext";
 
 export const Services = () => {
+
     const [windowWidth, setWindowWidth] = useState(0);
 
     const minWidthToShowImage: number= 530;

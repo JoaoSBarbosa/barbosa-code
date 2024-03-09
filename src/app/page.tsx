@@ -1,3 +1,4 @@
+"use client";
 import {HeaderNav} from "@/app/components/header/HeaderNav";
 import {ServicesContext} from "@/app/Contexts/ServicesContext";
 import {Introduction} from "@/app/components/main/Introduction";
@@ -8,16 +9,32 @@ import {DataProfessionalProjects} from "@/app/list/projects/dataProfessionalProj
 import {ProfessionalProjects} from "@/app/components/utils/carousel/ProfessionalProjectsCarousel";
 import styles from "@/app/components/Projects/LatestProjectContainer/styles.module.css";
 import Footer from "@/app/pages/footer/page";
-
+import {useEffect, useState} from "react";
 const Page = () => {
+    const handleScroll = () => {
+        const scrollPosition = window.scrollY + window.innerHeight;
+        const pageHeight = document.documentElement.scrollHeight;
+
+        const visibilityThreshold = 0.8;
+
+
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        }
+    }, []);
     return (
         <ServicesContext>
-            <div>
+            <div >
                 <HeaderNav/>
                 <Introduction/>
                 <ThreeLatestProjects projectsData={ProjectsData} title={"últimos projetos"} hrefUri={"projects"}/>
                 <Services/>
-                <div className={"max-w-screen-xl mx-auto mb-20"}>
+
+                <div className={`max-w-screen-xl mx-auto mb-20}`}>
                     <h2 className={`${styles.lastProjectTitle} max-w-screen-xl mx-auto`}>
                         Projetos Profissionais
                     </h2>
@@ -34,8 +51,8 @@ const Page = () => {
                             projectsData={DataProfessionalProjects}
                         />
                     </div>
-
                 </div>
+
                 <Footer/>
             </div>
         </ServicesContext>

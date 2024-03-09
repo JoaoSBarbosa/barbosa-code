@@ -1,10 +1,30 @@
+"use client";
 import styles from "./styles.module.css"
 import {Navbar} from "flowbite-react";
 import Link from "next/link";
-import React from "react";
+import React, {useEffect, useState} from "react";
 const Footer =()=>{
+
+    const [isVisible, setIsVisible] = useState<boolean>(false);
+    const handleScroll = () => {
+        const scrollPosition = window.scrollY + window.innerHeight;
+        const pageHeight = document.documentElement.scrollHeight;
+
+        const visibilityThreshold = 0.8;
+
+        if (scrollPosition > pageHeight * visibilityThreshold) {
+            setIsVisible(true);
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        }
+    }, []);
     return(
-        <footer className={`${styles.footerBg} `}>
+        <footer className={`${styles.footerBg} ${isVisible ? "visible" : "hidden"} transition ease-in-out delay-150`}>
             <div className={`${styles.footerContainer} max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-3`}>
 
                 <div>

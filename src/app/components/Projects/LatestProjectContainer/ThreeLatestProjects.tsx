@@ -12,6 +12,8 @@ type ThreeLatestProjectsProps ={
 }
 //últimos projetos
 export const ThreeLatestProjects = ({projectsData, title, hrefUri}:ThreeLatestProjectsProps) => {
+
+
     const lastThreeProjects = projectsData.slice(-3);
     return (
         <article className={`${styles.projectListContainer}`}>

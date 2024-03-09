@@ -1,9 +1,126 @@
-.introductionContainer{
+/* styles.module.css */
+
+@keyframes starMove {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+.star-intro {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background-color: #fff; /* Pode ser ajustado para roxo ou branco conforme necessário */
+    animation: starMove linear infinite;
+}
+
+.planet-intro {
+    position: absolute;
+    width: 10px; /* Ajuste o tamanho conforme necessário */
+    height: 10px; /* Ajuste o tamanho conforme necessário */
+    background-color: #800080; /* Roxo para planetas */
+    border-radius: 50%;
+    animation: starMove linear infinite;
+}
+
+/* Adicione estas regras à classe .introductionContainer */
+
+.introductionContainer {
     background-color: #000;
     padding-top: 80px;
-
+    overflow: hidden;
 }
-.introduction{
+
+/* Adicione as estrelas e planetas à .introductionContainer usando a classe .star-intro ou .planet-intro */
+
+.star-intro,
+.planet-intro {
+    top: 0;
+    left: 0;
+}
+
+/* Adicione a quantidade e o posicionamento desejados de estrelas e planetas */
+
+/* Estrelas */
+.star1 {
+    top: 20%;
+    left: 10%;
+}
+
+.star2 {
+    top: 50%;
+    left: 80%;
+}
+
+/* Planetas */
+.planet1 {
+    top: 70%;
+    left: 40%;
+}
+
+.planet2 {
+    top: 30%;
+    left: 60%;
+}
+
+.galaxyBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #000;
+    overflow: hidden; /* Adicionado para esconder as estrelas que ultrapassam a borda da tela */
+}
+
+.star {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background-color: #fff;
+    animation: twinkle 1s infinite, moveStars linear infinite; /* Adicionado movimento às estrelas */
+}
+
+.comet {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: #fff;
+    animation: cometMove linear infinite; /* Adicionado movimento linear aos cometas */
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes moveStars {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(100vh); /* Mova as estrelas para baixo da tela */
+    }
+}
+
+@keyframes cometMove {
+    from {
+        transform: translateX(0) translateY(-50vh); /* Mova os cometas de cima para baixo da tela */
+    }
+    to {
+        transform: translateX(100vw) translateY(100vh); /* Mova os cometas diagonalmente para fora da tela */
+    }
+}
+
+.introduction {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0 40px;
@@ -12,75 +129,79 @@
     padding-bottom: 20px;
     box-sizing: border-box;
     margin: 0 auto;
-
 }
-.introductionContent{
+
+.introductionContent {
     align-self: end;
     padding-bottom: 80px;
-    /*border: 1px solid red;*/
-
 }
-.introduction h1{
+
+.introduction h1 {
     margin-bottom: 32px;
     font-size: 64px;
     line-height: 1.125;
-
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
 }
-.introduction p{
+
+.introduction p {
     margin-bottom: 20px;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 24px;
     line-height: 1.5;
     color: #B2B2B2;
-
 }
-.introductionImage{
+
+.introductionImage {
     display: flex;
     justify-content: right;
-
 }
-.image{
-    /*width: 100%;*/
+
+.image {
     object-fit: cover;
-    /*transform: rotate(-2deg);*/
 }
 
-@media(max-width: 1200px){
-    .introductionContainer{
+@media (max-width: 1200px) {
+    .introductionContainer {
         background-color: #111111;
     }
-    .introduction{
+
+    .introduction {
         grid-template-columns: 1fr;
         gap: 0 32px;
     }
-    .introduction h1{
+
+    .introduction h1 {
         margin-bottom: 32px;
         font-size: 48px;
         line-height: 1.125;
     }
-    .introduction p{
+
+    .introduction p {
         font-size: 18px;
     }
-    .introductionImage{
+
+    .introductionImage {
         justify-content: center;
         grid-row: 1;
     }
 }
-@media(max-width: 800px){
-    .introductionContainer{
+
+@media (max-width: 800px) {
+    .introductionContainer {
         padding-top: 20px;
     }
-    .introduction{
+
+    .introduction {
         padding-bottom: 0;
     }
-    .introduction h1{
+
+    .introduction h1 {
         font-size: 32px;
         margin-bottom: 16px;
     }
-    .introductionImage{
 
+    .introductionImage {
     }
 }
