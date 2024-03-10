@@ -17,11 +17,11 @@ export const ThreeLatestProjects = ({projectsData, title, hrefUri}:ThreeLatestPr
     const lastThreeProjects = projectsData.slice(-3);
     return (
         <article className={`${styles.projectListContainer}`}>
-            <h2 className={`${styles.lastProjectTitle} max-w-screen-xl mx-auto`}>{title}</h2>
+            <h2 className={`${styles.lastProjectTitle} max-w-screen-xl mx-auto text-gray-400`}>{title}</h2>
             <ul className={`${styles.projectListContent}`}>
                 {lastThreeProjects.map((project, index) => (
                     <Link href={`/pages/projects/${project.id}`}>
-                        <li key={project.id}>
+                        <li key={project.id} className={"border border-gray-900"}>
                             <LatestProjectCard project={project}/>
                         </li>
                     </Link>

@@ -34,22 +34,22 @@ const Page = () => {
                 <ThreeLatestProjects projectsData={ProjectsData} title={"últimos projetos"} hrefUri={"projects"}/>
                 <Services/>
 
-                <div className={`max-w-screen-xl mx-auto mb-20}`}>
-                    <h2 className={`${styles.lastProjectTitle} max-w-screen-xl mx-auto`}>
+                <div className={`max-w-screen-xl mx-auto my-48`}>
+                    <h2 className={`${styles.lastProjectTitle} max-w-screen-xl mx-auto text-gray-800 my-20`}>
                         Projetos Profissionais
                     </h2>
 
                     <div className="grid gap-32 p-6 grid-cols-1 md:grid-cols-2">
-                        <ProfessionalProjects
-                            carroselTitle={"BeerFantose"}
-                            projectId={0}
-                            projectsData={DataProfessionalProjects}
-                        />
-                        <ProfessionalProjects
-                            carroselTitle={"B2BeerFantose"}
-                            projectId={1}
-                            projectsData={DataProfessionalProjects}
-                        />
+                        {/*<ProfessionalProjects*/}
+                        {/*    carroselTitle={"BeerFantose"}*/}
+                        {/*    projectId={0}*/}
+                        {/*    projectsData={DataProfessionalProjects}*/}
+                        {/*/>*/}
+                        {/*<ProfessionalProjects*/}
+                        {/*    carroselTitle={"B2BeerFantose"}*/}
+                        {/*    projectId={1}*/}
+                        {/*    projectsData={DataProfessionalProjects}*/}
+                        {/*/>*/}
                     </div>
                 </div>
 

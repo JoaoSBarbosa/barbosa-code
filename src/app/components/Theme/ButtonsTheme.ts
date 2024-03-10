@@ -55,7 +55,7 @@ export const ButtonsTheme ={
             "light": ""
         },
         "off": "",
-        "on": "flex justify-center bg-white text-gray-900 transition-all duration-75 ease-in group-enabled:group-hover:bg-opacity-0 group-enabled:group-hover:text-inherit dark:bg-gray-900 dark:text-white w-full",
+        "on": "flex justify-center text-gray-900 transition-all duration-75 ease-in group-enabled:group-hover:bg-opacity-0 group-enabled:group-hover:text-inherit dark:bg-gray-900 dark:text-white w-full",
         "pill": {
             "off": "rounded-md",
             "on": "rounded-full"

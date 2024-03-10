@@ -88,7 +88,7 @@ export const LinkButton = ({href, value, children, marginColor = '', textColor =
     const colorStyle = marginColor && textColor ? {color: textColor} : {};
 
     return (
-        <Button outline gradientDuoTone="purpleToIndigo" theme={ButtonsTheme} className={"hover:text-white "}
+        <Button outline gradientDuoTone="purpleToIndigo" theme={ButtonsTheme} className={"hover:text-white  "}
                 color={"indigo"}>
             <Link href={href} className={"flex items-center gap-2 text-2xl"}>
                 {children &&
