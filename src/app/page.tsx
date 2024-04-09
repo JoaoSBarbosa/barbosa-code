@@ -10,6 +10,8 @@ import {ProfessionalProjects} from "@/app/components/utils/carousel/Professional
 import styles from "@/app/components/Projects/LatestProjectContainer/styles.module.css";
 import Footer from "@/app/pages/footer/page";
 import {useEffect, useState} from "react";
+import {PrimeReactProvider} from "primereact/api";
+
 const Page = () => {
     const handleScroll = () => {
         const scrollPosition = window.scrollY + window.innerHeight;
@@ -27,35 +29,38 @@ const Page = () => {
         }
     }, []);
     return (
-        <ServicesContext>
-            <div >
-                <HeaderNav/>
-                <Introduction/>
-                <ThreeLatestProjects projectsData={ProjectsData} title={"últimos projetos"} hrefUri={"projects"}/>
-                <Services/>
+        <PrimeReactProvider>
+            <ServicesContext>
+                <div>
+                    <HeaderNav/>
+                    <Introduction/>
+                    <ThreeLatestProjects projectsData={ProjectsData} title={"últimos projetos"} hrefUri={"projects"}/>
+                    <Services/>
 
-                <div className={`max-w-screen-xl mx-auto my-48`}>
-                    <h2 className={`${styles.lastProjectTitle} max-w-screen-xl mx-auto text-gray-800 my-20`}>
-                        Projetos Profissionais
-                    </h2>
+                    <div className={`max-w-screen-xl mx-auto my-48`}>
+                        <h2 className={`${styles.lastProjectTitle} max-w-screen-xl mx-auto text-gray-800 my-20`}>
+                            Projetos Profissionais
+                        </h2>
 
-                    <div className="grid gap-32 p-6 grid-cols-1 md:grid-cols-2">
-                        {/*<ProfessionalProjects*/}
-                        {/*    carroselTitle={"BeerFantose"}*/}
-                        {/*    projectId={0}*/}
-                        {/*    projectsData={DataProfessionalProjects}*/}
-                        {/*/>*/}
-                        {/*<ProfessionalProjects*/}
-                        {/*    carroselTitle={"B2BeerFantose"}*/}
-                        {/*    projectId={1}*/}
-                        {/*    projectsData={DataProfessionalProjects}*/}
-                        {/*/>*/}
+                        <div className="grid gap-32 p-6 grid-cols-1 md:grid-cols-2">
+                            {/*<ProfessionalProjects*/}
+                            {/*    carroselTitle={"BeerFantose"}*/}
+                            {/*    projectId={0}*/}
+                            {/*    projectsData={DataProfessionalProjects}*/}
+                            {/*/>*/}
+                            {/*<ProfessionalProjects*/}
+                            {/*    carroselTitle={"B2BeerFantose"}*/}
+                            {/*    projectId={1}*/}
+                            {/*    projectsData={DataProfessionalProjects}*/}
+                            {/*/>*/}
+                        </div>
                     </div>
-                </div>
 
-                <Footer/>
-            </div>
-        </ServicesContext>
+                    <Footer/>
+                </div>
+            </ServicesContext>
+        </PrimeReactProvider>
+
     )
 }
 export default Page;
