@@ -6,6 +6,7 @@ import Footer from "@/app/pages/footer/page";
 import { Timeline } from "primereact/timeline";
 import { Card } from "primereact/card";
 import styles from "./experiences.module.css";
+import {ContainerLayout} from "@/app/components/layouts/Layouts";
 
 interface Experience {
     year: string;
@@ -16,7 +17,7 @@ interface Experience {
     technologies: string[];
 }
 
-const Page = () => {
+export const Experiencece = () => {
     const experiences: Experience[] = [
         {
             year: "2022",
@@ -69,11 +70,7 @@ const Page = () => {
     };
 
     return (
-        <ServicesContext>
-            <HeaderNav />
-            <section className={`${styles.experiencesContainer}`}>
-
-            </section>
+        <ContainerLayout title={"Experiência"}>
             <div className={styles.container}>
                 <Timeline
                     value={experiences}
@@ -83,9 +80,7 @@ const Page = () => {
                     content={customizedContent}
                 />
             </div>
-            <Footer />
-        </ServicesContext>
+        </ContainerLayout>
     );
 };
 
-export default Page;

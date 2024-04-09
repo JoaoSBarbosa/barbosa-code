@@ -11,6 +11,7 @@ import styles from "@/app/components/Projects/LatestProjectContainer/styles.modu
 import Footer from "@/app/pages/footer/page";
 import {useEffect, useState} from "react";
 import {PrimeReactProvider} from "primereact/api";
+import {Experiencece} from "@/app/components/experience";
 
 const Page = () => {
     const handleScroll = () => {
@@ -36,6 +37,9 @@ const Page = () => {
                     <Introduction/>
                     <ThreeLatestProjects projectsData={ProjectsData} title={"últimos projetos"} hrefUri={"projects"}/>
                     <Services/>
+                    <div id="experience">
+                        <Experiencece/>
+                    </div>
 
                     <div className={`max-w-screen-xl mx-auto my-48`}>
                         <h2 className={`${styles.lastProjectTitle} max-w-screen-xl mx-auto text-gray-800 my-20`}>

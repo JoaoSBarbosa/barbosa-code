@@ -20,9 +20,10 @@ export const HeaderNav = () => {
                     <Navbar.Link href="../" active>
                         Home
                     </Navbar.Link>
-                    <Navbar.Link as={Link} href="/pages/experiences">
-                        Experiências
-                    </Navbar.Link>
+                    {/*<Navbar.Link as={Link} href="/pages/experiences">*/}
+                    {/*    Experiências*/}
+                    {/*</Navbar.Link>*/}
+                    <Navbar.Link href="#experience">Experiências</Navbar.Link>
                     <Navbar.Link href="/pages/projects">
                         Projetos
                     </Navbar.Link>
