@@ -9,7 +9,8 @@ import {NavBarCustomTema} from "@/app/components/Theme/NavBarCustomTema";
 export const HeaderNav = () => {
     return (
         <header className={`bg-black pb-6 ${styles.menu}`}>
-            <Navbar fluid className={`${styles.navbar} ${styles.menu} bg-black max-w-screen-xl mx-auto `} theme={NavBarCustomTema}>
+            <Navbar fluid className={`${styles.navbar} ${styles.menu} bg-black max-w-screen-xl mx-auto `}
+                    theme={NavBarCustomTema}>
 
                 <Navbar.Brand as={Link} href="/">
                     <img src="/logo.svg" className="mr-3 h-20 sm:h-20" alt="Logo"/>
@@ -23,9 +24,12 @@ export const HeaderNav = () => {
                     {/*<Navbar.Link as={Link} href="/pages/experiences">*/}
                     {/*    Experiências*/}
                     {/*</Navbar.Link>*/}
-                    <Navbar.Link href="#experience">Experiências</Navbar.Link>
+                    <Navbar.Link href="../#experience">Experiências</Navbar.Link>
                     <Navbar.Link href="/pages/projects">
-                        Projetos
+                        Projetos pessoais
+                    </Navbar.Link>
+                    <Navbar.Link href="../#professionalProjects">
+                        Projetos Profissionais
                     </Navbar.Link>
                     <Navbar.Link href="/pages/about">
                         Sobre mim
@@ -33,7 +37,7 @@ export const HeaderNav = () => {
                 </Navbar.Collapse>
 
 
-        </Navbar>
+            </Navbar>
         </header>
     );
 };

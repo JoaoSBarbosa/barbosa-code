@@ -11,7 +11,7 @@ type ProfessionalProjectsProps = {
     carroselTitle: string;
 };
 
-export const ProfessionalProjects = ({projectsData, projectId, carroselTitle}: ProfessionalProjectsProps) => {
+export const ProfessionalProjectsCarrosel = ({projectsData, projectId, carroselTitle}: ProfessionalProjectsProps) => {
     const firstProject = projectsData[projectId];
 
     if (!firstProject) {

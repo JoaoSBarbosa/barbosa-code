@@ -19,7 +19,6 @@ export const ThreeLatestProjects = ({projectsData, title, hrefUri}: ThreeLatestP
     return (
 
         <ContainerLayout title={title}>
-            {/*<h2 className={`${styles.lastProjectTitle} max-w-screen-xl mx-auto text-gray-400`}>{title}</h2>*/}
             <ul className={`${styles.projectListContent}`}>
                 {lastThreeProjects.map((project, index) => (
                     <Link href={`/pages/projects/${project.id}`}>

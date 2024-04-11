@@ -6,12 +6,12 @@ import {ThreeLatestProjects} from "@/app/components/Projects/LatestProjectContai
 import {Services} from "@/app/components/services";
 import {ProjectsData} from "@/app/list/projects/projectsData";
 import {DataProfessionalProjects} from "@/app/list/projects/dataProfessionalProjects";
-import {ProfessionalProjects} from "@/app/components/utils/carousel/ProfessionalProjectsCarousel";
 import styles from "@/app/components/Projects/LatestProjectContainer/styles.module.css";
 import Footer from "@/app/pages/footer/page";
 import {useEffect, useState} from "react";
 import {PrimeReactProvider} from "primereact/api";
 import {Experiencece} from "@/app/components/experience";
+import {ProfessionalProjects} from "@/app/components/Projects/professionalProjects";
 
 const Page = () => {
     const handleScroll = () => {
@@ -40,25 +40,7 @@ const Page = () => {
                     <div id="experience">
                         <Experiencece/>
                     </div>
-
-                    <div className={`max-w-screen-xl mx-auto my-48`}>
-                        <h2 className={`${styles.lastProjectTitle} max-w-screen-xl mx-auto text-gray-800 my-20`}>
-                            Projetos Profissionais
-                        </h2>
-
-                        <div className="grid gap-32 p-6 grid-cols-1 md:grid-cols-2">
-                            {/*<ProfessionalProjects*/}
-                            {/*    carroselTitle={"BeerFantose"}*/}
-                            {/*    projectId={0}*/}
-                            {/*    projectsData={DataProfessionalProjects}*/}
-                            {/*/>*/}
-                            {/*<ProfessionalProjects*/}
-                            {/*    carroselTitle={"B2BeerFantose"}*/}
-                            {/*    projectId={1}*/}
-                            {/*    projectsData={DataProfessionalProjects}*/}
-                            {/*/>*/}
-                        </div>
-                    </div>
+                    <ProfessionalProjects/>
 
                     <Footer/>
                 </div>

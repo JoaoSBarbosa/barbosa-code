@@ -10,6 +10,7 @@ export type ProjectCardProps = {
     textColor?: string;
     paddingSize?:string;
     titleAlign?:string;
+    pathImage?: string;
 }
 
 const technologyIcons: Record<string, React.FC<IconBaseProps>> = {
@@ -35,7 +36,15 @@ export const PaddingSize = {
     p20: "20px",
     p15: "15px",
 };
-export const LatestProjectCard = ({ project, paddingSize,titleAlign="center", backgroundColor = BackgroundColors.BLACK, textColor = TextColors.WHITE }: ProjectCardProps) => {
+export const LatestProjectCard = (
+    {
+        project,
+        paddingSize,
+        titleAlign="center",
+        backgroundColor = BackgroundColors.BLACK,
+        textColor = TextColors.WHITE,
+        pathImage = "projects"
+    }: ProjectCardProps) => {
     return (
         <div
             className={`flex flex-col gap-5 ${styles.lastProjecContainer}`}
@@ -45,7 +54,7 @@ export const LatestProjectCard = ({ project, paddingSize,titleAlign="center", ba
                 {project?.title}
             </h3>
             <img
-                src={`/img/projects/${project.coverImage}`}
+                src={`/img/${pathImage}/${project.coverImage}`}
                 alt={project.coverImage}
                 className={"rounded-md border-2 border-gray-700"}
 
