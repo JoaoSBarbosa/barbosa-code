@@ -1,18 +1,11 @@
 import {ProjectsDataPros} from "@/app/type/projectsDataPros";
 import {HeaderNav} from "@/app/components/header/HeaderNav";
 import {ProjectsData} from "@/app/list/projects/projectsData";
-// import styles from "./styles.module.css";
 import styles from "../../../globalStyles/projects.module.css";
-import {Card} from 'flowbite-react';
 import {
-    colorOptions,
     ExternalNavButton,
-    LinkButton,
-    LinkButtonBorder,
     NavButton
 } from "@/app/components/utils/buttons/NavButton";
-import {ProfessionalProjects} from "@/app/components/utils/carousel/ProfessionalProjectsCarousel";
-import {DataProfessionalProjects} from "@/app/list/projects/dataProfessionalProjects";
 import {HiOutlineArrowSmLeft} from "react-icons/hi";
 import React from "react";
 import Footer from "@/app/pages/footer/page";
