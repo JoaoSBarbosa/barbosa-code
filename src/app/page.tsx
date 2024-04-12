@@ -1,17 +1,17 @@
 "use client";
-import {HeaderNav} from "@/app/components/header/HeaderNav";
+import {HeaderNav} from "@/app/components/Sections/header/HeaderNav";
 import {ServicesContext} from "@/app/Contexts/ServicesContext";
-import {Introduction} from "@/app/components/main/Introduction";
+import {Introduction} from "@/app/components/Sections/main/Introduction";
 import {ThreeLatestProjects} from "@/app/components/Projects/LatestProjectContainer/ThreeLatestProjects";
-import {Services} from "@/app/components/services";
 import {ProjectsData} from "@/app/list/projects/projectsData";
 import {DataProfessionalProjects} from "@/app/list/projects/dataProfessionalProjects";
 import styles from "@/app/components/Projects/LatestProjectContainer/styles.module.css";
 import Footer from "@/app/pages/footer/page";
 import {useEffect, useState} from "react";
 import {PrimeReactProvider} from "primereact/api";
-import {Experiencece} from "@/app/components/experience";
 import {ProfessionalProjects} from "@/app/components/Projects/professionalProjects";
+import {Services} from "@/app/components/services";
+import {Experiencece} from "@/app/components/Sections/experience";
 
 const Page = () => {
     const handleScroll = () => {

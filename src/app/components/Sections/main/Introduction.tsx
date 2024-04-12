@@ -1,6 +1,6 @@
 "use client"
 import Link from "next/link";
-import "@/app/components/main/styles.module.css";
+import "@/app/components/Sections/main/styles.module.css";
 import {inspect} from "util";
 import styles from './styles.module.css';
 import {colorOptions, NavButton} from "@/app/components/utils/buttons/NavButton";

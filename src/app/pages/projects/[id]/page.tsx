@@ -1,5 +1,5 @@
 import {ProjectsDataPros} from "@/app/type/projectsDataPros";
-import {HeaderNav} from "@/app/components/header/HeaderNav";
+import {HeaderNav} from "@/app/components/Sections/header/HeaderNav";
 import {ProjectsData} from "@/app/list/projects/projectsData";
 import styles from "../../../globalStyles/projects.module.css";
 import {

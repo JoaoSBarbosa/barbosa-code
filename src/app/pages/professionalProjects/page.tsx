@@ -1,4 +1,4 @@
-import {HeaderNav} from "@/app/components/header/HeaderNav";
+import {HeaderNav} from "@/app/components/Sections/header/HeaderNav";
 import Footer from "@/app/pages/footer/page";
 
 const Page=()=>{

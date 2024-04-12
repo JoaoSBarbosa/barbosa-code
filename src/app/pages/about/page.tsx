@@ -91,7 +91,7 @@
 //
 // export default AboutMe;
 'use client';
-import {HeaderNav} from "@/app/components/header/HeaderNav";
+import {HeaderNav} from "@/app/components/Sections/header/HeaderNav";
 import Footer from "@/app/pages/footer/page";
 import {Card, Carousel, Tabs} from 'flowbite-react';
 import {HiAdjustments, HiClipboardList, HiUserCircle} from 'react-icons/hi';

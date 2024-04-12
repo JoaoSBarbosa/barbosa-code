@@ -1,12 +1,15 @@
 "use client";
-import React from "react";
-import { HeaderNav } from "@/app/components/header/HeaderNav";
-import { ServicesContext } from "@/app/Contexts/ServicesContext";
+import React, {useEffect, useState} from "react";
+import {HeaderNav} from "@/app/components/Sections/header/HeaderNav";
+import {ServicesContext} from "@/app/Contexts/ServicesContext";
 import Footer from "@/app/pages/footer/page";
-import { Timeline } from "primereact/timeline";
-import { Card } from "primereact/card";
+import {Timeline as PrimeTimeline} from "primereact/timeline";
+import {Card} from "primereact/card";
 import styles from "./experiences.module.css";
 import {ContainerLayout} from "@/app/components/layouts/Layouts";
+import {Button, Timeline} from "flowbite-react";
+import {HiArrowNarrowRight, HiBriefcase, HiCalendar} from "react-icons/hi";
+import {TimelineTheme} from "@/app/theme/TimelineTheme";
 
 interface Experience {
     year: string;
@@ -18,6 +21,24 @@ interface Experience {
 }
 
 export const Experiencece = () => {
+
+    const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+    // Verifica se a tela é pequena
+    useEffect(() => {
+        const handleResize = () => {
+            setIsSmallScreen(window.innerWidth < 768); // Defina o tamanho de tela pequena conforme necessário
+        };
+
+        window.addEventListener('resize', handleResize);
+        handleResize(); // Verifica o tamanho da tela ao carregar a página
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+
     const experiences: Experience[] = [
         {
             year: "2022",
@@ -37,7 +58,7 @@ export const Experiencece = () => {
             role: "Programador júnior",
             responsibilities:
                 "Responsável pelo desenvolvimento backend Java, aplicando camadas service, controller, repository, DAO, e métodos CRUD para processar requisições. No frontend, emprego React, Next, TypeScript, Tailwind, e Flowbite, consumindo APIs REST do Java e facilitando a comunicação entre frontend e backend.",
-            technologies: ["Java", "Spring", "Next-js", "MySQL","React"],
+            technologies: ["Java", "Spring", "Next-js", "MySQL", "React"],
         },
     ];
 
@@ -72,13 +93,35 @@ export const Experiencece = () => {
     return (
         <ContainerLayout title={"Experiência"}>
             <div className={styles.container}>
-                <Timeline
-                    value={experiences}
-                    align="alternate"
-                    className={styles.timeline}
-                    marker={customizedMarker}
-                    content={customizedContent}
-                />
+
+                {
+                    isSmallScreen ? (
+
+                            <PrimeTimeline
+                                value={experiences}
+                                align="alternate"
+                                className={styles.timeline}
+                                marker={customizedMarker}
+                                content={customizedContent}
+                            />
+                        )
+                        :
+                        (
+                            <Timeline className={"text-white"} theme={TimelineTheme} >
+                                {experiences.map((experience)=>(
+                                    <Timeline.Item>
+                                        <Timeline.Point icon={HiBriefcase} />
+                                        <Timeline.Content>
+                                            <span className="text-sm my-1 font-bold text-gray-500">{experience.year} - {experience.lastYear}</span>
+                                            <h2 className="text-2xl my-1 font-semibold text-customPurple">{experience.company}</h2>
+                                            <h4 className={`text-xl font-semibold text-customPurple ${styles.subTitle}`}>{experience.role}</h4>
+                                            <p className="text-lg my-1 text-gray-400 max-w-screen-2xl text-justify">{experience.responsibilities}</p>
+                                        </Timeline.Content>
+                                    </Timeline.Item>
+                                ))}
+                            </Timeline>
+                        )
+                }
             </div>
         </ContainerLayout>
     );

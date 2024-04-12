@@ -29,3 +29,8 @@
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+.subTitle{
+    background: linear-gradient(to right, #949494, #694DF8, #2808dc);
+    -webkit-background-clip: text;
+    color: transparent;
+}

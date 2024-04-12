@@ -2,15 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@import 'primereact/resources/themes/lara-light-indigo/theme.css';
+@import 'primereact/resources/primereact.min.css';
+@import 'primeicons/primeicons.css';
 
 body{
     margin: 0;
     font-family: Arial,Helvetica, sans-serif;
 }
-@import 'primereact/resources/themes/lara-light-indigo/theme.css';
-@import 'primereact/resources/primereact.min.css';
-@import 'primeicons/primeicons.css';
-
 ul{
     padding: 0;
     list-style: none;

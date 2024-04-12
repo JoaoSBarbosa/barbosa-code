@@ -1,4 +1,4 @@
-import {HeaderNav} from "@/app/components/header/HeaderNav";
+import {HeaderNav} from "@/app/components/Sections/header/HeaderNav";
 import {ProjectsData} from "@/app/list/projects/projectsData";
 import Link from "next/link";
 import {
