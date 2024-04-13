@@ -2,7 +2,7 @@ import {DataProfessionalProjectsProps, DataProfessionalProjects} from "@/app/lis
 import {HeaderNav} from "@/app/components/Sections/header/HeaderNav";
 import styles from "./styles.module.css";
 import {ExternalNavButton, NavButton} from "@/app/components/utils/buttons/NavButton";
-import Footer from "@/app/pages/footer/page";
+import Footer from "@/app/components/Sections/footer/page";
 import {Button, Tooltip} from 'flowbite-react';
 
 type Props = {

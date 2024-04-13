@@ -2,7 +2,7 @@
 import React, {useEffect, useState} from "react";
 import {HeaderNav} from "@/app/components/Sections/header/HeaderNav";
 import {ServicesContext} from "@/app/Contexts/ServicesContext";
-import Footer from "@/app/pages/footer/page";
+import Footer from "@/app/components/Sections/footer/page";
 import {Timeline as PrimeTimeline} from "primereact/timeline";
 import {Card} from "primereact/card";
 import styles from "./experiences.module.css";
@@ -95,7 +95,7 @@ export const Experiencece = () => {
             <div className={styles.container}>
 
                 {
-                    isSmallScreen ? (
+                    !isSmallScreen ? (
 
                             <PrimeTimeline
                                 value={experiences}

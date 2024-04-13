@@ -7,7 +7,7 @@ import {
     TextColors
 } from "@/app/components/ProjectCard/LatestProjectCard/LatestProjectCard";
 import styles from "./styles.module.css";
-import Footer from "@/app/pages/footer/page";
+import Footer from "@/app/components/Sections/footer/page";
 
 const Page = () => {
     return (
@@ -20,7 +20,7 @@ const Page = () => {
                     <ul className={`${styles.projectListContent}`}>
                         {ProjectsData.map((project) => (
                             <Link href={`/pages/projects/${project.id}`}>
-                                <li key={project.id} >
+                                <li key={project.id}>
                                     <LatestProjectCard
                                         project={project}
                                         backgroundColor={BackgroundColors.BLACK}
@@ -33,8 +33,6 @@ const Page = () => {
                         ))}
                     </ul>
                 </div>
-
-
             </article>
             <Footer/>
         </>

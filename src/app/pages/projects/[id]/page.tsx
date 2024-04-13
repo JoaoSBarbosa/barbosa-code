@@ -8,7 +8,7 @@ import {
 } from "@/app/components/utils/buttons/NavButton";
 import {HiOutlineArrowSmLeft} from "react-icons/hi";
 import React from "react";
-import Footer from "@/app/pages/footer/page";
+import Footer from "@/app/components/Sections/footer/page";
 
 type Props = {
     params: {

@@ -1,11 +1,6 @@
 .footerBg {
-    background-color: black;
     background-color: #111111;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-    padding-top: 60px;
-    padding-bottom: 60px;
-    height: 228px;
+    padding: 60px 1.25rem;
 }
 
 .footerContainer {
@@ -29,4 +24,25 @@
     line-height: 1.35;
     font-family: Poppins, sans-serif;
 
+}
+
+.credits a{
+    display: inline-block;
+    position: relative;
+}
+
+.credits a::after {
+    content: "";
+    background-color: #694DF8;
+    height: 3px;
+    width: 0%;
+    display: block;
+    margin-top: 4px;
+    transition: all ease 0.4s;
+    position: absolute;
+}
+
+.credits a:hover::after {
+    width: 100%;
+    color: #fff;
 }

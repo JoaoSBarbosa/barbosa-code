@@ -1,43 +1,43 @@
 "use client"
-import Logo from 'next/image';
 import Link from 'next/link';
-import React, {useContext, useEffect, useState} from 'react';
-import styles from './styles.module.css';
-import {Navbar} from 'flowbite-react';
-import {NavBarCustomTema} from "@/app/components/Theme/NavBarCustomTema";
+import React, {useState} from 'react';
+import styles from "./styles.module.css"
 
+
+const navMenu = [
+    {id: '1', href: "/", label: "Home"},
+    {id: '2', href: "../#experience", label: "Experiências"},
+    {id: '3', href: "/pages/projects", label: "Projetos pessoais"},
+    {id: '4', href: "../#professionalProjects", label: "Projetos Profissionais"},
+    {id: '5', href: "/pages/about", label: "Sobre mim"},
+]
 export const HeaderNav = () => {
+
+    const [isActive, setIsActive] = useState<boolean>(false);
     return (
-        <header className={`bg-black pb-6 ${styles.menu}`}>
-            <Navbar fluid className={`${styles.navbar} ${styles.menu} bg-black max-w-screen-xl mx-auto `}
-                    theme={NavBarCustomTema}>
+        <header className={`${styles.headerContainer}`}>
 
-                <Navbar.Brand as={Link} href="/">
+            <div className={`flex justify-between items-center w-full p-4 `}>
+                <Link id={"logo"} href={"/"}>
                     <img src="/logo.svg" className="mr-3 h-20 sm:h-20" alt="Logo"/>
-                </Navbar.Brand>
+                </Link>
+                <nav className={`${styles.nav} ${isActive ? styles.active : ""}`}>
+                    <button className={`${styles.btnMobile}`}>
+                        <span className={`${styles.hamburger}`} onClick={() => setIsActive(!isActive)}>
 
-                <Navbar.Toggle/>
-                <Navbar.Collapse className={""}>
-                    <Navbar.Link href="../" active>
-                        Home
-                    </Navbar.Link>
-                    {/*<Navbar.Link as={Link} href="/pages/experiences">*/}
-                    {/*    Experiências*/}
-                    {/*</Navbar.Link>*/}
-                    <Navbar.Link href="../#experience">Experiências</Navbar.Link>
-                    <Navbar.Link href="/pages/projects">
-                        Projetos pessoais
-                    </Navbar.Link>
-                    <Navbar.Link href="../#professionalProjects">
-                        Projetos Profissionais
-                    </Navbar.Link>
-                    <Navbar.Link href="/pages/about">
-                        Sobre mim
-                    </Navbar.Link>
-                </Navbar.Collapse>
+                        </span>
+                    </button>
+                    <ul className={`text-white flex items-center gap-5 ${styles.menu}`}>
+                        {navMenu.map((menu) => (
+                            <li id={menu.id} className={"text-xl p-2 cursor-pointer"}>
+                                <Link href={menu.href}>{menu.label}</Link>
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
 
+            </div>
 
-            </Navbar>
         </header>
     );
 };

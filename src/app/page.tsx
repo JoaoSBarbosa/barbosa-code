@@ -6,7 +6,7 @@ import {ThreeLatestProjects} from "@/app/components/Projects/LatestProjectContai
 import {ProjectsData} from "@/app/list/projects/projectsData";
 import {DataProfessionalProjects} from "@/app/list/projects/dataProfessionalProjects";
 import styles from "@/app/components/Projects/LatestProjectContainer/styles.module.css";
-import Footer from "@/app/pages/footer/page";
+import Footer from "@/app/components/Sections/footer/page";
 import {useEffect, useState} from "react";
 import {PrimeReactProvider} from "primereact/api";
 import {ProfessionalProjects} from "@/app/components/Projects/professionalProjects";
