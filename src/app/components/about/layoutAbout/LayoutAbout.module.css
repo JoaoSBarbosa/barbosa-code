@@ -1,0 +1,18 @@
+.layoutTitle {
+    position: relative;
+    padding-left: 15px;
+    font-size: 1.5rem;
+    margin: 20px 0
+}
+
+.layoutTitle::before {
+    content: "";
+    position: absolute;
+    background: #411B78;
+    left:0;
+    bottom: 0;
+    top: 0;
+    display: block;
+    width: 7px;
+    height: inherit;
+}

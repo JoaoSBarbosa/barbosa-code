@@ -1,7 +1,8 @@
 .aboutContainer{
-    height: 100vh;
+    /*height: 100vh;*/
     padding-bottom: 1rem;
-    background-color: #111111;
+    background-color: #000;
+    /*background-color: #111111;*/
     color: #ffffff;
 
 }
