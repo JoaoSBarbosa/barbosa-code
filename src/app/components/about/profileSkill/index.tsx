@@ -1,6 +1,6 @@
-import { LayoutAbout } from "@/app/components/about/layoutAbout";
-import { useState } from "react";
-import { CaretDown, CaretUp } from "@phosphor-icons/react";
+import {LayoutAbout} from "@/app/components/about/layoutAbout";
+import {useEffect, useState} from "react";
+import {CaretDown, CaretUp} from "@phosphor-icons/react";
 import {Accordion} from "@/app/components/Accordion";
 
 interface Icon {
@@ -10,8 +10,9 @@ interface Icon {
 }
 
 
-
 export const ProfileSkill: React.FC = () => {
+
+    const [shadow, setShadow] = useState(false);
     const [showAccordion, setShowAccordion] = useState({
         frontEndTab: true,
         backEndTab: false,
@@ -19,28 +20,30 @@ export const ProfileSkill: React.FC = () => {
     });
 
     const toggleAccordion = (tab: keyof typeof showAccordion) => {
-        const updatedState = { frontEndTab: false, backEndTab: false, dataTab: false };
-        setShowAccordion({ ...updatedState, [tab]: !showAccordion[tab] });
+        const updatedState = {frontEndTab: false, backEndTab: false, dataTab: false};
+        setShowAccordion({...updatedState, [tab]: !showAccordion[tab]});
     };
 
+
+
     const frontendIconsSkill: Icon[] = [
-        { id: 1, techName: 'React', path: "/img/icons/react.svg" },
-        { id: 2, techName: 'Next.js', path: "/img/icons/nextjs.svg" },
-        { id: 3, techName: 'TypeScript', path: "/img/icons/typescript.svg" },
-        { id: 4, techName: 'Tailwind CSS', path: "/img/icons/tailwindcss.svg" },
-        { id: 5, techName: 'CSS', path: "/img/icons/css.svg" },
-        { id: 6, techName: 'Sass', path: "/img/icons/sass.svg" },
-        { id: 7, techName: 'Figma', path: "/img/icons/figma.svg" },
+        {id: 1, techName: 'React', path: "/img/icons/react.svg"},
+        {id: 2, techName: 'Next.js', path: "/img/icons/nextjs.svg"},
+        {id: 3, techName: 'TypeScript', path: "/img/icons/typescript.svg"},
+        {id: 4, techName: 'Tailwind CSS', path: "/img/icons/tailwindcss.svg"},
+        {id: 5, techName: 'CSS', path: "/img/icons/css.svg"},
+        {id: 6, techName: 'Sass', path: "/img/icons/sass.svg"},
+        {id: 7, techName: 'Figma', path: "/img/icons/figma.svg"},
     ];
 
     const backendIconsSkill: Icon[] = [
-        { id: 1, techName: 'Java', path: "/img/icons/java.svg" },
-        { id: 2, techName: 'Spring', path: "/img/icons/spring.svg" },
+        {id: 1, techName: 'Java', path: "/img/icons/java.svg"},
+        {id: 2, techName: 'Spring', path: "/img/icons/spring.svg"},
     ];
 
     const dataIconsSkill: Icon[] = [
-        { id: 1, techName: 'MySQL', path: "/img/icons/mysql.svg" },
-        { id: 2, techName: 'MongoDB', path: "/img/icons/mongodb.svg" },
+        {id: 1, techName: 'MySQL', path: "/img/icons/mysql.svg"},
+        {id: 2, techName: 'MongoDB', path: "/img/icons/mongodb.svg"},
     ];
 
     return (
@@ -49,7 +52,7 @@ export const ProfileSkill: React.FC = () => {
                 <Accordion
                     borderT={true}
                     title="Desenvolvimento Frontend"
-                    icon={showAccordion.frontEndTab ? <CaretUp size={32} /> : <CaretDown size={32} />}
+                    icon={showAccordion.frontEndTab ? <CaretUp size={32}/> : <CaretDown size={32}/>}
                     onClick={() => {
                         toggleAccordion('frontEndTab');
                     }}
@@ -99,7 +102,8 @@ export const ProfileSkill: React.FC = () => {
                 >
                     <div className={"flex flex-col gap-4"}>
                         <p>
-                            Criação de tabelas e relacionamentos, consultas, persistência e revogação utilizando MySQL, MariaDB e
+                            Criação de tabelas e relacionamentos, consultas, persistência e revogação utilizando MySQL,
+                            MariaDB e
                             MongoDB.
                         </p>
                         <div className="flex flex-wrap items-center gap-4">

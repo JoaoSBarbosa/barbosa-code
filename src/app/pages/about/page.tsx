@@ -103,16 +103,18 @@ import {CarouselTheme} from "@/app/components/Theme/CarouselTheme";
 import {ProfileHeader} from "@/app/components/about/profileHeader";
 import {ProfileAbout} from "@/app/components/about/profileAbout";
 import {ProfileSkill} from "@/app/components/about/profileSkill";
+import {ProfileSchool} from "@/app/components/about/profileSchool";
 
 const AboutMe = () => {
     return (
         <>
             <HeaderNav/>
-            <section className={`${styles.aboutContainer} bg-gradient-to-r from-black to-purple-900`}>
+            <section className={`${styles.aboutContainer}`}>
                 <div className={"max-w-screen-xl mx-auto py-16"}>
                     <ProfileHeader/>
                     <ProfileAbout/>
                     <ProfileSkill/>
+                    <ProfileSchool/>
                 </div>
             </section>
             <Footer/>
