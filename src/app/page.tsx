@@ -32,7 +32,7 @@ const Page = () => {
     return (
         <PrimeReactProvider>
             <ServicesContext>
-                <div>
+                <main>
                     <HeaderNav/>
                     <Introduction/>
                     <ThreeLatestProjects projectsData={ProjectsData} title={"últimos projetos"} hrefUri={"projects"}/>
@@ -43,7 +43,7 @@ const Page = () => {
                     <ProfessionalProjects/>
 
                     <Footer/>
-                </div>
+                </main>
             </ServicesContext>
         </PrimeReactProvider>
 
