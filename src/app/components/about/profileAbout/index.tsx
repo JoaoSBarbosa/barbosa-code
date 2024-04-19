@@ -3,9 +3,9 @@ import {LayoutAbout} from "@/app/components/about/layoutAbout";
 export const ProfileAbout = () => {
     return (
         <LayoutAbout title={"Sobre mim"}>
-            <div className={"flex gap-5 p-2"}>
-                <div className={"flex-1"}>
-                    <p className={"text-2xl"}>
+            <div className={"grid sm:grid-cols-1 lg:grid-cols-2 gap-10 p-2"}>
+                <div className={"flex-1 "}>
+                    <p className={"text-2xl text-justify"}>
                         Sou um programador júnior apaixonado por desenvolvimento de software. Tenho especial interesse
                         em
                         tecnologia, ficção científica, medieval e terror. Além disso, sou entusiasta de jogos RPG e
@@ -24,10 +24,11 @@ export const ProfileAbout = () => {
                         Estou aberto a novos desafios e oportunidades de crescimento. Entre em contato comigo!
                     </p>
                 </div>
-                <div className={"flex-1"}>
-                    <img src="/img/animation1.gif" alt=""  style={{maxHeight: "400px", width: "100%", objectFit:"cover", objectPosition:"center"}}/>
+                <div className={"flex-1 bg-gray-950"}>
+                    <img src="/img/animation2.gif" alt=""/>
                 </div>
             </div>
+
         </LayoutAbout>
     )
 }

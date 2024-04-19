@@ -104,6 +104,7 @@ import {ProfileHeader} from "@/app/components/about/profileHeader";
 import {ProfileAbout} from "@/app/components/about/profileAbout";
 import {ProfileSkill} from "@/app/components/about/profileSkill";
 import {ProfileSchool} from "@/app/components/about/profileSchool";
+import {ProfileBanner} from "@/app/components/about/profileBanner";
 
 const AboutMe = () => {
     return (
@@ -115,6 +116,7 @@ const AboutMe = () => {
                     <ProfileAbout/>
                     <ProfileSkill/>
                     <ProfileSchool/>
+                    <ProfileBanner/>
                 </div>
             </section>
             <Footer/>
