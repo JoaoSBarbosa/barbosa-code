@@ -1,5 +1,5 @@
 import {HeaderNav} from "@/app/components/Sections/header/HeaderNav";
-import Footer from "@/app/components/Sections/footer/page";
+import Footer from "@/app/components/Sections/footer";
 
 const Page=()=>{
     return(

@@ -30,7 +30,23 @@ export const ProjectsData: ProjectsDataPros[] = [
         title: 'Cyberdyne System',
         coverImage: 'project4.png',
         description: ' Projete um site fictício totalmente responsivo. O intuioto do projeto é aprimorar as habilidade em desenvolver sites aplicando bons uso de variaveis, responsividade, reutilização de códigos e posicionamento de elementos. O site foi desenvolvido com HTML, CSSe JavaScript.',
-        technologies: ['HTLM', 'CSS','JavaScript'],
+        technologies: ['HTML', 'CSS','JavaScript'],
         url: 'https://cyberdynesystemv2.netlify.app/',
+    }, {
+        id: 5,
+        title: 'Itaqua Alerta',
+        coverImage: 'project12.png',
+        description: ' Projete um site fictício totalmente responsivo. O intuioto do projeto é aprimorar as habilidade em desenvolver sites aplicando bons uso de variaveis, responsividade, reutilização de códigos e posicionamento de elementos. O site foi desenvolvido com HTML, CSSe JavaScript.',
+        technologies: ['PHP', 'CSS','JavaScript'],
+        url: 'https://github.com/JoaoSBarbosa/itaquaalerta',
+        gitRepository:true
+    },
+    {
+        id: 6,
+        title: 'Playcinejb',
+        coverImage: 'project11.png',
+        description: ' Projete um site fictício totalmente responsivo. O intuioto do projeto é aprimorar as habilidade em desenvolver sites aplicando bons uso de variaveis, responsividade, reutilização de códigos e posicionamento de elementos. O site foi desenvolvido com HTML, CSSe JavaScript.',
+        technologies: ['REACT', 'CSS','HTML'],
+        url: 'https://playcinejb-fg65ejzx6-joaosbarbosa.vercel.app/',
     },
 ];

@@ -2,11 +2,9 @@
     /*height: calc(100vh - 110px);*/
     background-color: #111111;
     color: #fff;
-    /*padding-top: 80px;*/
     display: flex;
     flex-direction: column;
-    border: 2px solid red;
-    padding: 5px;
+    padding: 15px;
 
 }
 
@@ -24,16 +22,9 @@
 }
 
 .projectContent {
-    /*display: flex;*/
-    /*flex-wrap: wrap;*/
-    /*align-items: center;*/
-    /*display: grid;*/
-    /*grid-template-columns: 1fr 1fr;*/
-    /*height: 90%;*/
-    /*width: 80vw;*/
     padding: 5px;
     display: flex;
-    flex-direction: column;
+    /*flex-direction: column;*/
     align-items: center;
     justify-content: center;
 
@@ -53,6 +44,8 @@
 
 .projectDetails {
     /*flex: 1;*/
+    height: max-content;
+    border: 2px solid red;
 }
 
 .projectDetails h2 {

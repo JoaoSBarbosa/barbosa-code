@@ -2,11 +2,11 @@
 import {HeaderNav} from "@/app/components/Sections/header/HeaderNav";
 import {ServicesContext} from "@/app/Contexts/ServicesContext";
 import {Introduction} from "@/app/components/Sections/main/Introduction";
-import {ThreeLatestProjects} from "@/app/components/Projects/LatestProjectContainer/ThreeLatestProjects";
+import {LatestProjects} from "@/app/components/Projects/LatestProjectContainer/LatestProjects";
 import {ProjectsData} from "@/app/list/projects/projectsData";
 import {DataProfessionalProjects} from "@/app/list/projects/dataProfessionalProjects";
 import styles from "@/app/components/Projects/LatestProjectContainer/styles.module.css";
-import Footer from "@/app/components/Sections/footer/page";
+import Footer from "@/app/components/Sections/footer";
 import {useEffect, useState} from "react";
 import {PrimeReactProvider} from "primereact/api";
 import {ProfessionalProjects} from "@/app/components/Projects/professionalProjects";
@@ -35,7 +35,7 @@ const Page = () => {
                 <main>
                     <HeaderNav/>
                     <Introduction/>
-                    <ThreeLatestProjects projectsData={ProjectsData} title={"últimos projetos"} hrefUri={"projects"}/>
+                    <LatestProjects/>
                     <Services/>
                     <div id="experience">
                         <Experiencece/>

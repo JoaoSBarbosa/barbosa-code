@@ -1,6 +1,6 @@
 import styles from "@/app/components/layouts/Layouts.module.css";
 import {ReactNode} from "react";
-import Footer from "@/app/components/Sections/footer/page";
+import Footer from "@/app/components/Sections/footer";
 
 interface LayoutContainerProps {
     title: string;

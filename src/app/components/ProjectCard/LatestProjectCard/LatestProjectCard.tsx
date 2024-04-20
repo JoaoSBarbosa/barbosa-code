@@ -56,7 +56,7 @@ export const LatestProjectCard = (
             <img
                 src={`/img/${pathImage}/${project.coverImage}`}
                 alt={project.coverImage}
-                className={"rounded-md border-2 border-gray-700"}
+                className={"rounded-md border-2 h-full border-gray-700"}
 
             />
 

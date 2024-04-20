@@ -22,13 +22,13 @@
 
 .projectListContent {
     /*display: flex;*/
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
-    padding: 0 20px 20px 20px;
-    max-width: 1400px;
-    margin: 0 auto;
-    overflow: auto;
-    scrollbar-width: thin;
-    scrollbar-color: #694DF8 #000;
+    /*display: grid;*/
+    /*grid-template-columns: repeat(4, 1fr);*/
+    /*gap: 40px;*/
+    /*padding: 0 20px 20px 20px;*/
+    /*max-width: 1400px;*/
+    /*margin: 0 auto;*/
+    /*overflow: auto;*/
+    /*scrollbar-width: thin;*/
+    /*scrollbar-color: #694DF8 #000;*/
 }

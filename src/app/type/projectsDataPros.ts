@@ -7,4 +7,5 @@ export type ProjectsDataPros = {
     description: string;
     technologies: string[];
     url: string;
+    gitRepository?: boolean;
 }

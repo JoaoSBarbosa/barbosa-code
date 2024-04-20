@@ -25,7 +25,10 @@
     transition: all ease .5s;
 
 }
-
+.lastProjecContainer{
+    border: 2px solid rebeccapurple;
+    height: 500px;
+}
 
 
 .lastProjecContainer:hover .lastProjectSubTitle,

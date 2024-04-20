@@ -7,29 +7,28 @@ import {
     TextColors
 } from "@/app/components/ProjectCard/LatestProjectCard/LatestProjectCard";
 import styles from "./styles.module.css";
-import Footer from "@/app/components/Sections/footer/page";
+import Footer from "@/app/components/Sections/footer";
+import {DisplayCard} from "@/app/components/displayCard";
 
 const Page = () => {
     return (
         <>
             <HeaderNav/>
-            <article className={`${styles.projectMain} `}>
-                <div className={`${styles.projectListContainer} max-w-screen-xl mx-auto`}>
+            <article className={`${styles.projectMain} p-10`}>
+                <div className={`${styles.projectListContainer} max-w-screen-2xl mx-auto border border-amber-100`}>
                     <h2 className={`${styles.lastProjectTitle}  text-gray-400`}>Todos os projetos</h2>
 
-                    <ul className={`${styles.projectListContent}`}>
-                        {ProjectsData.map((project) => (
-                            <Link href={`/pages/projects/${project.id}`}>
-                                <li key={project.id}>
-                                    <LatestProjectCard
-                                        project={project}
-                                        backgroundColor={BackgroundColors.BLACK}
-                                        textColor={TextColors.WHITE}
-                                        paddingSize={PaddingSize.p15}
 
-                                    />
+                    <ul className={`grid grid-cols-4 gap-4 p-5 border border-amber-100`}>
+                        {ProjectsData.map((project, index) => (
+
+                            <Link href={`/pages/projects/${project.id}`} className={"block w-max"}>
+                                <li key={project.id} className={""}>
+                                    <DisplayCard project={project} height={400} width={300}/>
                                 </li>
                             </Link>
+
+
                         ))}
                     </ul>
                 </div>
