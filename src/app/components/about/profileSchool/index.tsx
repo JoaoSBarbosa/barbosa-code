@@ -1,4 +1,4 @@
-import {LayoutAbout} from "@/app/components/about/layoutAbout";
+import {LayoutAbout} from "../layoutAbout";
 import {Card} from "flowbite-react";
 
 export const ProfileSchool = () =>{

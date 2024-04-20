@@ -1,4 +1,4 @@
-import {LayoutAbout} from "@/app/components/about/layoutAbout";
+import {LayoutAbout} from "../layoutAbout";
 
 export const  ProfileHeader=()=>{
     return(

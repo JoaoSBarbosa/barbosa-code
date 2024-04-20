@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {LayoutAbout} from "@/app/components/Sections/about/layoutAbout";
+import {LayoutAbout} from "../layoutAbout";
 import {FaGithub, FaInstagram, FaLinkedin} from "react-icons/fa";
 import styles from './ProfileBanner.module.css';
 
