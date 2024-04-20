@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
-import {LayoutAbout} from "@/app/components/about/layoutAbout";
 import {FaGithub, FaInstagram, FaLinkedin} from "react-icons/fa";
-import styles from './ProfileBanner.module.css';
+import {LayoutAbout} from "@/app/components/about/layoutAbout";
 
 interface Social {
     id: number;
@@ -23,7 +22,7 @@ export const ProfileBanner: React.FC = () => {
     return (
         <LayoutAbout title={"Redes Sociais"}>
             <div className={`relative`}>
-                <img src="/img/animation4.gif" alt="teste"/>
+                <img src="/img/animation4.gif" alt="animação gif jovem programando"/>
 
                 <div className={"absolute flex flex-col gap-10 top-5"}>
                     {socials.map((social) => (
@@ -36,7 +35,7 @@ export const ProfileBanner: React.FC = () => {
                                 onMouseLeave={() => setHoveredIcon(null)}
                             >
                                 {React.createElement(social.icon, {
-                                    size: 50,
+                                    size: window.innerWidth > 600 ? 50 : 35,
                                     className: "cursor-pointer",
                                     title: social.title
                                 })}
@@ -49,17 +48,28 @@ export const ProfileBanner: React.FC = () => {
             </div>
             <div className={"bg-gray-950 py-6"}>
                 <div className={"max-w-4xl mx-auto"}>
-                    <h3 className={"text-2xl font-semibold text-center mb-4"}>Créditos dos Gifs</h3>
-                    <div className={"flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0"}>
+                    <h3 className={"text-xl lg:text-2xl font-semibold text-center mb-4"}>Créditos dos Gifs</h3>
+                    <div className={"flex flex-col p-1.5 md:flex-row justify-center items-center space-y-4 md:space-y-0"}>
 
-                            <p className={"text-lg"}>
-                                Os gif utilizados foram criados por
-                                <a href="https://www.deviantart.com/watch/kirokaze/deviations" target="_blank" rel="noopener noreferrer" className={"text-blue-500 underline mx-1"}>
-                                    kirokaze
-                                </a>.
-                            Confira o trabalho dele no <a href="https://www.deviantart.com/watch/eiskalterengel18/deviations" target="_blank" rel="noopener noreferrer"
-                                                               className={"text-blue-500 underline"}>DeviantArt</a>.
-                            </p>
+                        <p className={"text-xs lg:text-lg"}>
+                            Os gif utilizados foram criados por
+                            <a
+                                href="https://www.deviantart.com/watch/kirokaze/deviations"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={"text-blue-500 underline mx-1"}
+                            >
+                                kirokaze
+                            </a>.
+                            Confira o trabalho dele no
+                            <a
+                                href="https://www.deviantart.com/watch/eiskalterengel18/deviations"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={"text-blue-500 underline"}>
+                                DeviantArt
+                            </a>.
+                        </p>
 
                     </div>
                 </div>

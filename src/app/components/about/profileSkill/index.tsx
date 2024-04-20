@@ -1,7 +1,7 @@
 import {LayoutAbout} from "@/app/components/about/layoutAbout";
 import {useEffect, useState} from "react";
 import {CaretDown, CaretUp} from "@phosphor-icons/react";
-import {Accordion} from "@/app/components/Accordion";
+import {Accordion} from "@/app/components/accordion";
 
 interface Icon {
     id: number;

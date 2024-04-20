@@ -1,5 +1,6 @@
 import {LayoutAbout} from "@/app/components/about/layoutAbout";
 import {TechnologiesData} from "@/app/list/technologies/technologiesData";
+import styles from "./ProfileHeader.module.css";
 
 export const ProfileHeader = () => {
     return (
@@ -7,12 +8,11 @@ export const ProfileHeader = () => {
 
             <div className={`grid sm:grid-cols-1 lg:grid-cols-2 sm:justify-center sm:p-5 lg:justify-center gap-10`}>
 
-                <div className={" flex items-center justify-center"}>
+                <div className={" flex items-center justify-center w-full"}>
                     <figure
-                        className={"bg-purple-600 w-max flex items-center justify-center rounded-full overflow-hidden"}>
+                        className={"bg-purple-600  flex items-center w-full justify-center rounded-full overflow-hidden"}>
                         <img
-                            style={{width: "500px"}}
-                            className="block"
+                            className={`block ${styles.image}`}
                             src="../img/barbosa.gif"
                             alt="Foto do perfil"
                         />
@@ -28,7 +28,7 @@ export const ProfileHeader = () => {
                         projetos de e-commerce.
                     </p>
                     <div
-                        className="flex flex-wrap w-full items-center justify-around">
+                        className="flex flex-wrap gap-10 lg:gap-5 w-full items-center justify-start">
                         {TechnologiesData.map((tech) => (
                             <img src={tech.uraImage} alt={tech.technology} className={"w-10"}/>
                         ))}
