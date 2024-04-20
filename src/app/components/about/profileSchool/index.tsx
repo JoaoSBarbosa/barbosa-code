@@ -1,6 +1,4 @@
 import {LayoutAbout} from "@/app/components/about/layoutAbout";
-import {Accordion} from "@/app/components/Accordion";
-import {CaretDown, CaretUp} from "@phosphor-icons/react";
 import {Card} from "flowbite-react";
 
 export const ProfileSchool = () =>{
@@ -16,7 +14,7 @@ export const ProfileSchool = () =>{
                     <ul>
                         <li className={"flex gap-1 items-center"}>
                             <p className="font-normal text-gray-700 dark:text-gray-400">Duração:</p>
-                            <p className="font-normal text-gray-700 dark:text-gray-400">2 anos e 6 meses</p>
+                            <p className="font-normal text-gray-700 dark:text-gray-400">2 anos e 6 meses-</p>
                         </li>
 
                         <li className={"flex gap-1 items-center"}>
