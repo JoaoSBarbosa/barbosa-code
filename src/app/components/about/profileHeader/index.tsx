@@ -1,4 +1,4 @@
-import {LayoutAbout} from "@/app/components/about/layoutAbout";
+import {LayoutAbout} from "../layoutAbout";
 import {TechnologiesData} from "@/app/list/technologies/technologiesData";
 import styles from "./ProfileHeader.module.css";
 

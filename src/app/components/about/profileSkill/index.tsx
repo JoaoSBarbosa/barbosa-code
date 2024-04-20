@@ -1,7 +1,32 @@
 import {LayoutAbout} from "@/app/components/about/layoutAbout";
 import {useEffect, useState} from "react";
 import {CaretDown, CaretUp} from "@phosphor-icons/react";
-import {Accordion} from "@/app/components/accordion";
+
+
+
+interface AccordionProps {
+    title: string;
+    icon: JSX.Element;
+    onClick: () => void;
+    isOpen: boolean;
+    children: React.ReactNode;
+    borderB?: boolean;
+    borderT?: boolean;
+}
+
+const AccordionSkill: React.FC<AccordionProps> = ({ title, borderB,borderT, icon, onClick, isOpen, children }) => {
+    return (
+        <div>
+            <div className={`bg-gray-950 p-4 shadow-lg shadow-purple-500/15 ${borderB && "rounded-b-lg"} ${borderT && "rounded-t-lg"} border-b border-gray-900 w-full flex  justify-between items-center cursor-pointer`} onClick={onClick}>
+                <h2>{title}</h2>
+                <span>{icon}</span>
+            </div>
+            <div className={`${isOpen ? "block" : "hidden"} p-4 bg-black`}>
+                {children}
+            </div>
+        </div>
+    );
+};
 
 interface Icon {
     id: number;
@@ -11,6 +36,8 @@ interface Icon {
 
 
 export const ProfileSkill: React.FC = () => {
+
+
 
     const [shadow, setShadow] = useState(false);
     const [showAccordion, setShowAccordion] = useState({
@@ -49,7 +76,7 @@ export const ProfileSkill: React.FC = () => {
     return (
         <LayoutAbout title={"Habilidades"}>
             <div className="border border-purple-900 rounded-lg">
-                <Accordion
+                <AccordionSkill
                     borderT={true}
                     title="Desenvolvimento Frontend"
                     icon={showAccordion.frontEndTab ? <CaretUp size={32}/> : <CaretDown size={32}/>}
@@ -69,9 +96,9 @@ export const ProfileSkill: React.FC = () => {
                             ))}
                         </div>
                     </div>
-                </Accordion>
+                </AccordionSkill>
 
-                <Accordion
+                <AccordionSkill
                     title="Desenvolvimento Backend"
                     icon={showAccordion.backEndTab ? <CaretUp size={32}/> : <CaretDown size={32}/>}
                     onClick={() => {
@@ -89,9 +116,9 @@ export const ProfileSkill: React.FC = () => {
                             ))}
                         </div>
                     </div>
-                </Accordion>
+                </AccordionSkill>
 
-                <Accordion
+                <AccordionSkill
                     borderB={true}
                     title="Banco de Dados"
                     icon={showAccordion.dataTab ? <CaretUp size={32}/> : <CaretDown size={32}/>}
@@ -112,7 +139,7 @@ export const ProfileSkill: React.FC = () => {
                             ))}
                         </div>
                     </div>
-                </Accordion>
+                </AccordionSkill>
             </div>
         </LayoutAbout>
     );

@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
+import {LayoutAbout} from "../layoutAbout";
 import {FaGithub, FaInstagram, FaLinkedin} from "react-icons/fa";
-import {LayoutAbout} from "@/app/components/about/layoutAbout";
+import styles from './ProfileBanner.module.css';
 
 interface Social {
     id: number;
@@ -35,7 +36,7 @@ export const ProfileBanner: React.FC = () => {
                                 onMouseLeave={() => setHoveredIcon(null)}
                             >
                                 {React.createElement(social.icon, {
-                                    size: 35,
+                                    size: window.innerWidth > 600 ? 50 : 35,
                                     className: "cursor-pointer",
                                     title: social.title
                                 })}
