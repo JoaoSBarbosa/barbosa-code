@@ -1,28 +1,23 @@
 import {LayoutAbout} from "../layoutAbout";
-import {Card} from "flowbite-react";
+import {Card} from "../../card/Card";
 
 export const ProfileSchool = () =>{
-    const STATUS: string = "cursando"
+
     return (
         <LayoutAbout title={"Formação"}>
-            <div className="">
-                <Card className="w-full" imgSrc="/img/uninter-logo.svg" horizontal>
-                    <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                        Tecnologia em Análise e Desenvolvimento de Sistemas
-                    </h5>
+            <div
+                className={`grid sm:grid-cols-1 lg:grid-cols-2 sm:justify-center sm:p-5 lg:p-1 lg:justify-center gap-10`}>
 
-                    <ul>
-                        <li className={"flex gap-1 items-center"}>
-                            <p className="font-normal text-gray-700 dark:text-gray-400">Duração:</p>
-                            <p className="font-normal text-gray-700 dark:text-gray-400">2 anos e 6 meses-</p>
-                        </li>
-
-                        <li className={"flex gap-1 items-center"}>
-                            <p className="font-normal text-gray-700 dark:text-gray-400">Status:</p>
-                            <p className="font-normal text-gray-700 dark:text-gray-400">{STATUS}</p>
-                        </li>
-                    </ul>
-                </Card>
+                <Card
+                    levelTraining="Tecnólogo"
+                    trainingCourse={" Análise e Desenvolvimento de Sistemas"}
+                    trainingInstitution={"UNINTER"}
+                />
+                <Card
+                    levelTraining="Técnico"
+                    trainingCourse={"Tecnico em Desenvolvimento de Sistemas"}
+                    trainingInstitution={"Etec"}
+                />
             </div>
         </LayoutAbout>
     );

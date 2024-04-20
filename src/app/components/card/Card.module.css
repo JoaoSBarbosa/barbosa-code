@@ -1,0 +1,42 @@
+.training {
+    flex: 1;
+    background-color: #000;
+    padding: 20px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    color: #f7f7f7;
+}
+
+.levelTraining {
+    font-size: .75rem;
+    text-transform: uppercase;
+    color: #707070;
+    margin-bottom: 10px
+}
+
+.trainingCourse {
+    font-size: 1.125rem;
+    line-height: 1.4;
+    margin-bottom: 40px;
+    position: relative;
+    flex: 1
+}
+.trainingCourse::before {
+    content: "";
+    display: block;
+    width: 4px;
+    height: 20px;
+    background: linear-gradient(#a839ff, #701cda);
+    position: absolute;
+    left: -24px
+}
+
+.trainingInstitution {
+    font-size: 1.125rem;
+    color: #707070;
+}
+
+
+
+
