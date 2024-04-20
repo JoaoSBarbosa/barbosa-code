@@ -36,7 +36,7 @@ export const ProfileBanner: React.FC = () => {
                                 onMouseLeave={() => setHoveredIcon(null)}
                             >
                                 {React.createElement(social.icon, {
-                                    size: window.innerWidth > 600 ? 50 : 35,
+                                    size: 35,
                                     className: "cursor-pointer",
                                     title: social.title
                                 })}
