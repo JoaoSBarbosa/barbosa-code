@@ -168,7 +168,7 @@ const ProjectSelected = ({params}: Props) => {
                                             </a>
 
                                             <a
-                                                href="/projects"
+                                                href="/pages/projects"
                                                 className="
                                                 text-blue-500 hover:text-white border border-blue-500 hover:bg-blue-800
                                                 focus:ring-2 focus:outline-none focus:ring-blue-300 font-medium rounded-lg

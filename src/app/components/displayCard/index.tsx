@@ -1,7 +1,7 @@
 import React from "react";
 import {ProjectsDataPros} from "@/app/type/projectsDataPros";
 import {TechnologiesIconsData} from "@/app/list/technologies/technologiesIconsData";
-
+import styles from "./DisplayCard.module.css"
 type DisplayCardProps = {
     project: ProjectsDataPros;
     width?: string | number;
@@ -20,11 +20,11 @@ export const DisplayCard = ({
     const techIcons = TechnologiesIconsData;
     return (
         <div
-            className={`bg-white rounded-lg shadow-lg overflow-hidden relative`}
-            style={{height: height ? height : 500, width: width ? width : 400}}
-
+            className={`${styles.container} bg-white shadow-lg overflow-hidden relative rounded-md border-2 border-purple-600 lg:border-none lg:rounded-none `}
+            style={{height: height ? height : 500, width: width ? width : "auto"}}
+            // style={{ height: height ? height : 500 }}
         >
-            <div className="relative h-3/4">
+            <div className="relative h-3/4 border border-red-400">
                 <img
                     src={`../img/${pathImage}/${coverImage}`}
                     alt={title}
@@ -43,8 +43,10 @@ export const DisplayCard = ({
                                             key={icon.id}
                                             src={`${icon.uraImage}`}
                                             alt={tech}
-                                            className="w-6 h-6 mr-2"
-                                            style={{fill: icon.color}}
+                                            // className="w-6 h-6 mr-2 object-cover"
+                                            // style={{fill: icon.color}}
+                                            // className="w-full h-full object-cover" // Usando object-cover para manter proporções da imagem
+                                            // style={{ objectFit: "cover" }}
                                         />
                                     )
                             )}

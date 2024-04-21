@@ -25,18 +25,18 @@ export const LatestProjects = () => {
     <ContainerLayout title={"últimos projetos"}>
       <ul className={`${styles.projectListContent}`}>
         {lastThreeProjects.map((project, index) => (
-          <div className={"flex border border-red-500"}>
-            <Link href={`/pages/projects/${project.id}`}>
+          // <div className={"flex p-0  lg:p-1 border border-green-800"}>
+            <Link href={`/pages/projects/${project.id}`} className={"lg:border border-gray-900"}>
               <li key={project.id}>
                 <DisplayCard project={project} pathImage={'projects'}/>
               </li>
             </Link>
-          </div>
+          // </div>
         ))}
       </ul>
 
-      <div className={"max-w-screen-xl mx-auto px-5"}>
-        <LinkButton href={`/projects`} value={"Ver todos"} />
+      <div className={"max-w-screen-xl mx-auto mt-5 px-5"}>
+        <LinkButton href={`pages/projects`} value={"Ver todos"} />
       </div>
     </ContainerLayout>
   );

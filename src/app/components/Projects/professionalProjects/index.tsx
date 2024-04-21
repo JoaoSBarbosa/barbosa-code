@@ -20,13 +20,8 @@ export const ProfessionalProjects = () => {
             target={"_blank"}
             title={`Visiste o projeto ${project.title}`}
           >
-            <li key={project.id} className={"border border-gray-900"}>
-              {/*<LatestProjectCard*/}
-              {/*  project={project}*/}
-              {/*  pathImage={"projectsProfessional"}*/}
-              {/*/>*/}
+            <li key={project.id} className={"lg:border border-gray-900"}>
               <DisplayCard project={project}  pathImage={'projectsProfessional'}/>
-
             </li>
           </a>
         ))}

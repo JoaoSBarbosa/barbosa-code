@@ -1,0 +1,37 @@
+
+.container{
+    border: 2px solid lime;
+}
+/*.container {*/
+/*    flex: 1 1 200px*/
+/*}*/
+/*@media (max-width: 908px) {*/
+/*    .container {*/
+/*        width: 358px;*/
+/*    }*/
+/*}*/
+/*@media (max-width: 810px) {*/
+/*    .container {*/
+/*        width: 350px;*/
+/*    }*/
+/*}*/
+/*@media (max-width: 805px) {*/
+/*    .container {*/
+/*        width: 300px;*/
+/*    }*/
+
+/*}*/
+/*@media (max-width: 700px) {*/
+/*    .container {*/
+/*        width: 255px;*/
+/*    }*/
+
+/*}*/
+
+/*@media (max-width: 600px) {*/
+/*    .container {*/
+/*        max-width: 100%;*/
+/*        width: 100%;*/
+/*    }*/
+
+/*}*/

@@ -3,7 +3,10 @@
     background-color: black;
 
 }
-
+.ulContainer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
 .projectListContainer {
     padding-top: 60px;
     padding-bottom: 120px;
@@ -31,4 +34,12 @@
     /*overflow: auto;*/
     /*scrollbar-width: thin;*/
     /*scrollbar-color: #694DF8 #000;*/
+}
+@media(max-width: 600px){
+    .containerLi{
+        width: 100%;
+    }
+    .linkContainer{
+        width: 100%;
+    }
 }
