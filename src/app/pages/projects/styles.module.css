@@ -4,8 +4,8 @@
 
 }
 .ulContainer{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    justify-content: center;
 }
 .projectListContainer {
     padding-top: 60px;

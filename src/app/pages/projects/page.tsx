@@ -23,7 +23,7 @@ const Page = () => {
             Todos os projetos
           </h2>
 
-          <ul className={`flex flex-wrap gap-10 p-5 ${styles.ulContainer}`}>
+          <ul className={`flex flex-wrap gap-10 p-5 border border-red-400 ${styles.ulContainer}`}>
             {ProjectsData.map((project, index) => (
               <Link
                 href={`/pages/projects/${project.id}`}
