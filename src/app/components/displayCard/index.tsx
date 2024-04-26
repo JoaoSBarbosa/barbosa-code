@@ -72,12 +72,11 @@ type DisplayCardProps = {
 export const DisplayCard = ({ project, width, pathImage, ...res }: DisplayCardProps) => {
     const { title, coverImage, technologies } = project;
     const techIcons = TechnologiesIconsData;
-    const cardWidth = width || 400; // Defina a largura padrão aqui
-    const cardHeight = 600; // Defina a altura fixa aqui
+
 
     return (
         <div
-            className={`${styles.container} bg-white shadow-lg overflow-hidden relative rounded-md border-2 border-purple-600 lg:border-none lg:rounded-none`}
+            className={`${styles.container} bg-white shadow-lg overflow-hidden relative rounded-md border-2 border-gray-600 lg:border-none lg:rounded-none`}
 
         >
             <div className="relative h-3/4">

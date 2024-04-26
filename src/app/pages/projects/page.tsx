@@ -19,17 +19,17 @@ const Page = () => {
         <div
           className={`${styles.projectListContainer} max-w-screen-2xl mx-auto`}
         >
-          <h2 className={`${styles.lastProjectTitle}  text-gray-400 text-sm`}>
+          <h2 className={`${styles.lastProjectTitle}  text-gray-400 sm:text-xs 2xl:text-base`}>
             Todos os projetos
           </h2>
 
-          <ul className={`flex flex-wrap gap-10 p-5 border border-red-400 ${styles.ulContainer}`}>
+          <ul className={`flex flex-wrap gap-10 p-5 ${styles.ulContainer}`}>
             {ProjectsData.map((project, index) => (
               <Link
                 href={`/pages/projects/${project.id}`}
                 className={`block max-w-full lg:w-max ${styles.linkContainer}`}
               >
-                <li key={project.id} className={`max-w-full ${styles.containerLi}`}>
+                <li key={project.id} className={`max-w-full  ${styles.containerLi}`}>
                   <DisplayCard project={project}  pathImage={'projects'}/>
                 </li>
               </Link>

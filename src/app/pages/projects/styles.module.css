@@ -42,4 +42,14 @@
     .linkContainer{
         width: 100%;
     }
+    .lastProjectTitle {
+        font-size: 2.5rem;
+        font-weight: 600;
+        font-family: 'Poppins', sans-serif;
+        line-height: 1.125;
+        margin-bottom: 40px;
+        max-width: 1200px;
+        box-sizing: border-box;
+        padding: 0 20px;
+    }
 }
