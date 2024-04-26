@@ -27,12 +27,17 @@ export const ProfileHeader = () => {
                         e manutenção de páginas web, sistemas e componentes de interface em WordPress. Atuando em
                         projetos de e-commerce.
                     </p>
-                    <div
-                        className="flex flex-wrap gap-10 lg:gap-5 w-full items-center justify-start">
-                        {TechnologiesData.map((tech) => (
-                            <img src={tech.uraImage} alt={tech.technology} className={"w-10"}/>
+                    <div className="flex  box-border flex-wrap gap-10 lg:gap-5 w-full items-center justify-start">
+                        {TechnologiesData.map((tech, index) => (
+                            <img
+                                key={index}
+                                src={tech.uraImage}
+                                alt={tech.technology}
+                                className="w-8 hover:w-10 transition-transform duration-300 transform hover:scale-110"
+                            />
                         ))}
                     </div>
+
                 </div>
             </div>
 
