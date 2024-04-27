@@ -25,7 +25,7 @@ export const ProfileAbout = () => {
                     </p>
                 </div>
                 <div className={"flex-1 bg-gray-950"}>
-                    <img src="/img/animation2.gif" alt=""/>
+                    <img src="/img/animation2.gif" alt="" className={"h-full object-cover"}/>
                 </div>
             </div>
 

@@ -38,10 +38,10 @@ const Footer = () => {
                     <h3 className="text-white font-bold mb-4">Contato</h3>
                     <ul className={`${styles.footerContactList}`}>
                         <li className="mb-2">
-                            <a href="tel:+5511994537464">11 99453-7464</a>
+                            <a href="https://www.linkedin.com/in/devjbarbosa/" target={'_blank'}>in/devjbarbosa</a>
                         </li>
                         <li>
-                            <a href="mailto:contato.jsbarbosa@gmail.com?subject=Oportunidade Profissional&body=Olá%20João,%0D%0A%0D%0AEstou%20interessado%20em%20discutir%20uma%20oportunidade%20profissional%20.%20Vamos%20conversar!%0D%0A%0D%0AAtenciosamente,%0D%0ASeu%20Nome">
+                            <a href="mailto:contato.jsbarbosa@gmail.com?subject=Oportunidade Profissional&body=Olá%20João,%0D%0A%0D%0AEstou%20interessado%20em%20discutir%20uma%20oportunidade%20profissional%20.%20Vamos%20conversar!%0D%0A%0D%0AAtenciosamente,%0D%0ASeu%20Nome" target={'_blank'}>
                                 contato.jsbarbosa@gmail.com
                             </a>
                         </li>
@@ -71,7 +71,13 @@ const Footer = () => {
                     &copy; {new Date().getFullYear()} Barbosa Code - Todos os direitos reservados.
                 </p>
                 <p className={`text-center text-gray-400 ${styles.credits}`}>
-                    Desenvolvido por <a href="https://www.linkedin.com/in/devjbarbosa/" target={'_blank'}>João Barbosa</a>
+                    Desenvolvido por
+                    <a href="https://www.linkedin.com/in/devjbarbosa/" target={'_blank'}>
+                        <span className={"mx-1"}>João Barbosa</span>
+                    </a> | gif utilizados foram criados por <a
+                    href="https://www.deviantart.com/watch/kirokaze/deviations" target="_blank"
+                    rel="noopener noreferrer"> <span className={"mx-1"}> kirokaze</span>
+                </a>.
                 </p>
             </div>
 

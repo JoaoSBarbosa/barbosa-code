@@ -19,7 +19,7 @@ const Page = () => {
         <div
           className={`${styles.projectListContainer} max-w-screen-2xl mx-auto`}
         >
-          <h2 className={`${styles.lastProjectTitle}  text-gray-400 sm:text-xs 2xl:text-base`}>
+          <h2 className={`${styles.lastProjectTitle}  text-gray-400 sm:text-xs 2xl:text-4xl`}>
             Todos os projetos
           </h2>
 

@@ -6,9 +6,9 @@ export const ProfileHeader = () => {
     return (
         <LayoutAbout>
 
-            <div className={`grid sm:grid-cols-1 lg:grid-cols-2 sm:justify-center sm:p-5 lg:justify-center gap-10`}>
+            <div className={`flex gap-10`}>
 
-                <div className={" flex items-center justify-center w-full"}>
+                <div className={" flex items-center justify-center w-3/12"}>
                     <figure
                         className={"bg-purple-600  flex items-center w-full justify-center rounded-full overflow-hidden"}>
                         <img
@@ -19,7 +19,7 @@ export const ProfileHeader = () => {
                     </figure>
 
                 </div>
-                <div className={"mx-1 flex flex-col gap-10 items-start"}>
+                <div className={"mx-1 w-9/12 flex flex-col gap-10 items-start"}>
                     <h2 className={"text-5xl"}>Olá ! Sou o João</h2>
                     <p className={"text-2xl break-words mt-10"}>
                         Desenvolvedor fullstack utilizando as linguagens Java, Javascript e blibiotecas e framework
@@ -33,7 +33,7 @@ export const ProfileHeader = () => {
                                 key={index}
                                 src={tech.uraImage}
                                 alt={tech.technology}
-                                className="w-8 hover:w-10 transition-transform duration-300 transform hover:scale-110"
+                                className="w-8"
                             />
                         ))}
                     </div>
